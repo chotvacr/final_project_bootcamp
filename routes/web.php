@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**www.active.test would be the landing page */
+Route::get('/', 'CategoryController@index')->name('category.index');
+
+/** Possible structure: 
+ * 
+ * Route::get('/categories', 'CategoryController@index)         --> would show the second page with the 4 categories
+ * 
+ * Route::get('/categories/{category_id}', 'CategoryController@show)  --> this would be the 3. page with details on the selected category
+ * 
+ * 
+ */
+
+ Route::get('/categories/{category_id', 'CategoryController@show')->name('category.show'); 
