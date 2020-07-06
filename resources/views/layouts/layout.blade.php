@@ -9,9 +9,9 @@
 </head>
 <body>
 
-    @include('partials.header');
+    @include('partials.header')
 
-    @yield('content'); 
+    @yield('content')
 
 </body>
 </html>
