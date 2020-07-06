@@ -42,10 +42,13 @@ Route::get('/{city_name}/categories', 'CategoryController@index')->name('categor
 // Personal logged-in page
 Route::get('/home', 'UserController@edit');
 
-
+// shows all activities in Laravel
 Route::get('/{city_name}/{category_id}/activities', 'ActivityController@index')->name('activity.index');
 
-
+// Detail of the activity
+// Route::get('/{city_name}/{category_id}/activities/{activity_id}', 'ActivityController@show')->name('activity.show');
+Route::get('/activities/{activity_id}', 'ActivityController@show')->name('activity.show');
+Route::get('/activities/{activity_id}/registered', 'ActivityController@show')->name('activity.show');
 
 // Route::post('/', 'UserController@update'); 
 

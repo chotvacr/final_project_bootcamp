@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Activity;
+use App\Category;
 
 use Illuminate\Http\Request;
 
@@ -12,6 +13,13 @@ class ActivityController extends Controller
         $activities = Activity::all(); 
 
         return view('activity.index', compact('activities')); 
+    }
+
+    public function show($activity_id)
+    {
+        
+       $activity = Activity::findOrFail($activity_id);
+       return view('activity.show', compact('activity'));
     }
     
     public function store(Request $request)
@@ -50,18 +58,7 @@ class ActivityController extends Controller
         return redirect('BookshopController@index');
 
     }
-    
-    public function show($bookshop_id)
-    {
-        $bookshop = Bookshop::with('books')->findOrFail($bookshop_id);
-        $bookshop =Bookshop::findOrFail($bookshop_id);
-        $bookshop->load('books');
-        $books=Book::all();
-    
-        return view('bookshop.show', compact('bookshop','books'));
-    }
-    
-        
+
     public function addBook($bookshop_id, Request $request)
     {
         $bookshop =Bookshop::findOrFail($bookshop_id);
