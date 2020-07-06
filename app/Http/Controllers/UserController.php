@@ -1,11 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\User;
 
 use Illuminate\Http\Request;
 
 class UserController extends Controller
-{
+{   public function show($user_id)
+    {
+        $user = User::findOrFail($user_id);
+        return view ('home');
+    }
 
     public function edit($user_id)
     {

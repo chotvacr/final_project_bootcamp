@@ -13,11 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Landing Page
-Route::get('/', 'CityController@index')->name('city.index'); 
 
-// Second Page: 
-Route::get('/{city_id}/categories', 'CategoryController@index')->name('category.index'); 
+
+
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -34,12 +32,44 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+
+//Landing Page
+Route::get('/', 'CityController@index')->name('city.index'); 
+
+// Second Page: 
+Route::get('/{city_name}/categories', 'CategoryController@index')->name('category.index'); 
+
 // Personal logged-in page
 Route::get('/home', 'UserController@edit');
-Route::post('/', 'UserController@update'); 
 
+
+Route::get('/{city_name}/{category_id}/activities', 'ActivityController@index')->name('activity.index');
+
+
+
+// Route::post('/', 'UserController@update'); 
+
+Route::post('/description', 'UserController@update'); 
+
+
+//Activity creation page
+Route::post('/description', 'UserController@update'); 
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/user/{user_id}', 'RegistrationController@index');
+Route::get('/profile/{user_id}', 'UserController@show');
+
+
+
+
+// /city_name/categories/category_name/activities - activities in different categories a
+// /city_name/categories/category_name/activities/activity_id ..... detail of activity
+
+// // activities
+// activity_id/edit (update method happens here) GET for edit POST with Update
+// activity_id/create (store method happens here) POST
+// activity_id/remove 
+
+// /profile/user_id 
+
 

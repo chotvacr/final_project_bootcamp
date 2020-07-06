@@ -65,6 +65,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+           @guest 
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -77,7 +78,11 @@
                         @endif
                     @endauth
                 </div>
+            
             @endif
+            @else 
+            <a href="{{ route('logout') }}">Log out</a>
+            @endguest
 
             <div class="content">
                 <div class="title m-b-md">

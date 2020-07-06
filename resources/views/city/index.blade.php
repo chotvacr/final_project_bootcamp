@@ -5,17 +5,43 @@
 
   <h2>Ready for an adventure?</h2>
 
-  <select name="cities" id="cities">
+  <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+  <option value="">Select...</option>
+
+  <!-- <select name="cities" id="cities"> -->
     @foreach ($cities as $city)
-    <option value="{{ $city->name }}" onclick="redirectTo()">{{ $city->name }}</option>
+    <option value="{{ $city->name }}/categories"> {{$city->name}}</option>
     @endforeach
   </select>
 
-  <script>
+<script>
     const redirectTo = () => {
-      location.href = "/{{ $city->id }}/categories"
-    }
+      location.href = "/{{ $city->name }}/categories"
+      }
   </script>
+
+
+  @guest 
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            
+            @endif
+            @else 
+            <a href="{{ route('logout') }}">Log out</a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+            </form>
+            @endguest
 
 @endsection
 
