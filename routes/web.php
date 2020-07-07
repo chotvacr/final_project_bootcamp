@@ -58,13 +58,33 @@ Route::post('/description', 'UserController@update');
 //Activity creation page
 Route::post('/description', 'UserController@update'); 
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/profile/{user_id}', 'UserController@show');
-
-
+Route::get('/profile/{user_id}', 'UserController@show')->name('profile.show');
 
 
+//  active.test/ - landing page
+// on landing page, we have multiple options : 
+// a. redirected to register 
+        // active.test/register 
+// b. redirected to login 
+        // active.test/login
+// c. redirected to categories of selected city
+        // active.test/{city_name}/categories
+// active.test/prague/categories 
+        // a. got to category name active.test/{city_name=prague}/categories/{category_name = Coocing, Coding, Helping, Language }
+        // b. go to home page
+        // c. register/login 
+// active.test/prague/categories/category_name/activities - this page is done with React 
+        // this page shows all activities in city Prague, in selected category 
+//  active.test/prague/categories/category_name/activities/activity_id 
+        // detail of the activity
+        // we can register for this activity - with button, that saves into database user_id and activity_id (registration pivot table ??)
+        // we stay on the same page, we see alert/pop up message, stating you are registered for this activity, for management go to your profile
+// active.test/profile/{user_id} - on this page, you can edit user information, see registered activities-possibility to remove, see your activities + add your activity
+// active.test/profile/{user_id}/activity_creation
+  
+        
 // /city_name/categories/category_name/activities - activities in different categories a
 // /city_name/categories/category_name/activities/activity_id ..... detail of activity
 
