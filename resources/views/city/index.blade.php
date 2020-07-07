@@ -10,13 +10,13 @@
 
   <!-- <select name="cities" id="cities"> -->
     @foreach ($cities as $city)
-    <option value="{{ $city->name }}/categories"> {{$city->name}}</option>
+    <option value="/cities/{{ $city->id }}/categories"> {{$city->id}}</option>
     @endforeach
   </select>
 
 <script>
     const redirectTo = () => {
-      location.href = "/{{ $city->name }}/categories"
+      location.href = "/cities/{{ $city->id }}/categories"
       }
   </script>
 

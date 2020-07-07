@@ -104,7 +104,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\js\activities.js */"./resources/js/activities.js");
+module.exports = __webpack_require__(/*! C:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\js\activities.js */"./resources/js/activities.js");
 
 
 /***/ })

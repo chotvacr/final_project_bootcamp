@@ -34,7 +34,7 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('/home', 'UserController@edit');
 
 // shows all activities in Laravel
-Route::get('/{city_name}/{category_id}/activities', 'ActivityController@index')->name('activity.index');
+//Route::get('/{city_name}/{category_id}/activities', 'ActivityController@index')->name('activity.index');
 
 // Detail of the activity
 // Route::get('/{city_name}/{category_id}/activities/{activity_id}', 'ActivityController@show')->name('activity.show');
@@ -63,7 +63,7 @@ Route::get('/', 'CityController@index')->name('city.index');
         // active.test/login
 // c. redirected to categories of selected city OK
         // active.test/{city_name}/categories
-Route::get('/cities/{city_id}/categories', 'CategoryController@index')->name('category.index'); 
+Route::get('/cities/{city_id}/categories', 'CityController@show')->name('city.show'); 
 // active.test/prague/categories 
         // a. got to category name active.test/{city_name=prague}/categories/{category_name = Coocing, Coding, Helping, Language }
         // b. go to home page
