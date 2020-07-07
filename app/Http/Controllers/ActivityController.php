@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\City; 
 use App\User; 
 use App\Activity;
 use App\Category;
@@ -10,13 +11,13 @@ use Illuminate\Http\Request;
 
 class ActivityController extends Controller
 {
-    /*
+    
     public function index()
     {
         $activities = Activity::all(); 
         return view('activity.index', compact('activities')); 
     }
-    */
+    
 
     public function show($category_id)
     {
@@ -35,7 +36,14 @@ class ActivityController extends Controller
         return view('activity.detail', compact('activity', 'user')); 
     }
 
-    /*
+    public function create()
+    {
+        $activities = Activity::all();
+        $cities = City::all(); 
+        $categories = Category::all(); 
+        return view('activity.create', compact('activities', 'cities', 'categories'));
+    }
+
     public function store(Request $request)
     { 
         $this->validate($request, 
@@ -64,14 +72,16 @@ class ActivityController extends Controller
         $activity->save();
     
     
-        $books_ids->$request->input('books');
+        //$activities_ids->$request->input('activities');
             
-        $bookshop->books()->sync($books_ids);
+        //$bookshop->books()->sync($books_ids);
             
             
-        return redirect('BookshopController@index');
+        return redirect('CityController@index');
 
     }
+
+    /*
 
     public function addBook($bookshop_id, Request $request)
     {
