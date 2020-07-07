@@ -10,7 +10,7 @@
 
   <!-- <select name="cities" id="cities"> -->
     @foreach ($cities as $city)
-    <option value="/cities/{{ $city->id }}/categories"> {{$city->id}}</option>
+    <option value="/cities/{{ $city->id }}/categories"> {{$city->name}}</option>
     @endforeach
   </select>
 

@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\User; 
 use App\Activity;
 use App\Category;
 
@@ -8,20 +10,32 @@ use Illuminate\Http\Request;
 
 class ActivityController extends Controller
 {
+    /*
     public function index()
     {
         $activities = Activity::all(); 
-
         return view('activity.index', compact('activities')); 
     }
+    */
 
-    public function show($activity_id)
+    public function show($category_id)
     {
-        
-       $activity = Activity::findOrFail($activity_id);
-       return view('activity.show', compact('activity'));
+        $category = Category::findOrFail($category_id); 
+        $activities = Activity::where('category_id', $category_id)->get(); 
+
+        return view('activity.index', compact('category', 'activities')); 
+
     }
-    
+
+    public function detail($activity_id, $user_id)
+    {
+        $activity = Activity::findOrFail($activity_id); 
+        $user = User::findOrFail($user_id); 
+
+        return view('activity.detail', compact('activity', 'user')); 
+    }
+
+    /*
     public function store(Request $request)
     { 
         $this->validate($request, 
@@ -76,6 +90,6 @@ class ActivityController extends Controller
     
         return redirect(action('BookshopController@show', $bookshop->id));
     }
-    
+    */
     
 }

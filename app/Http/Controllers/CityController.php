@@ -14,12 +14,14 @@ class CityController extends Controller
         return view('city.index', compact('cities')); 
     }
 
+    // shows all the categories of a specific city
     public function show($city_id) 
     {
         
         $city = City::findOrFail($city_id); 
         $categories = $city->categories; 
-        dd($categories); 
-        
+        // dd($categories); 
+     
+        return view('city.show', compact('city', 'categories'));
     }
 }

@@ -16,6 +16,7 @@
  
 </body>
 </html> -->
+
 @extends('layouts.layout')
 @section('content')
 
