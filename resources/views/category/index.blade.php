@@ -6,7 +6,7 @@
     <br>
 
 
-    @foreach ($categories as $category) 
+    @foreach ($cities->categories as $category) 
         <h1>{{ $category->name }}</h1>
         <h2>{{ $category->description }}</h2>
         <a href="categories/{{ $category->id }}">Explore and find your activities</a>

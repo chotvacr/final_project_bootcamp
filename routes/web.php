@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
-
-
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
@@ -33,11 +29,6 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
-//Landing Page
-Route::get('/', 'CityController@index')->name('city.index'); 
-
-// Second Page: 
-Route::get('/{city_name}/categories', 'CategoryController@index')->name('category.index'); 
 
 // Personal logged-in page
 Route::get('/home', 'UserController@edit');
@@ -63,14 +54,16 @@ Route::post('/description', 'UserController@update');
 Route::get('/profile/{user_id}', 'UserController@show')->name('profile.show');
 
 
-//  active.test/ - landing page
+//  active.test/ - landing page OK
+Route::get('/', 'CityController@index')->name('city.index'); 
 // on landing page, we have multiple options : 
-// a. redirected to register 
+// a. redirected to register - OK
         // active.test/register 
-// b. redirected to login 
+// b. redirected to login  -OK
         // active.test/login
-// c. redirected to categories of selected city
+// c. redirected to categories of selected city OK
         // active.test/{city_name}/categories
+Route::get('/cities/{city_id}/categories', 'CategoryController@index')->name('category.index'); 
 // active.test/prague/categories 
         // a. got to category name active.test/{city_name=prague}/categories/{category_name = Coocing, Coding, Helping, Language }
         // b. go to home page
