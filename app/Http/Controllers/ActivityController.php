@@ -69,6 +69,9 @@ class ActivityController extends Controller
         $activity->name = $request->input('name');
         $activity->description = $request->input('description');
         $activity->group_size = $request->input('group_size');
+        $activity->price = $request->input('price');
+        $activity->date_time = $request->input('date_time');
+        $activity->postcode = $request->input('group_size');
         $activity->save();
     
     

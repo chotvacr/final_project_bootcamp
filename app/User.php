@@ -8,9 +8,9 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    public function activity()
+    public function activities()
     {
-        return $this->hasMany('App\activity');
+        return $this->hasMany('App\Activity');
     }
 
 

@@ -1,3 +1,5 @@
+<!--shows the Landing page-->
+
 @extends('layouts.layout')
 @section('content')
 

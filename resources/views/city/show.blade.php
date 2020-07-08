@@ -1,3 +1,5 @@
+<!--shows the Categories of one specific City-->
+
 @extends('layouts.layout')
 @section('content')
     
