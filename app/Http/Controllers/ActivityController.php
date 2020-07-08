@@ -19,12 +19,13 @@ class ActivityController extends Controller
     }
     
 
-    public function show($category_id)
+    public function show($category_id, $city_id)
     {
+        $city = City::all(); 
         $category = Category::findOrFail($category_id); 
         $activities = Activity::where('category_id', $category_id)->get(); 
 
-        return view('activity.index', compact('category', 'activities')); 
+        return view('activity.index', compact('category', 'activities', 'city')); 
 
     }
 
@@ -32,6 +33,7 @@ class ActivityController extends Controller
     {
         $activity = Activity::findOrFail($activity_id); 
         $user = User::findOrFail($user_id); 
+        $userActivities = $user->activities()->where('id', '!=', $activity_id)->limit(3)->get(); 
 
         return view('activity.detail', compact('activity', 'user')); 
     }
@@ -54,9 +56,9 @@ class ActivityController extends Controller
                 'description' => 'required|string|max:255',
                 'group_size' => 'required|int|max:255',
                 'price' => 'required|int|max:255',
-                'picture' => 'required|string|max:255',
+                //'picture' => 'required|string|max:255',
                 'date_time' => 'required|string|max:255',
-                'adress' => 'required|string|max:255',
+                'address' => 'required|string|max:255',
                 'postcode' => 'required|int|max:255',
                 'email' => 'required|string|max:255',
             

@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
  *      b)      Personal Profile Page (if logged in):  
  *   
  *      c)      Overview Activities:                    
- *                Route::get('/cities/{city_id}/{category_id}/activities', ActivityController@index')           ->name('activities.index'); 
+ *                Route::get('/cities/{city_id}/{category_id}/activities', ActivityController@index')           ->name('activity.index'); 
  * 
  * 
  * 3. Overview Activities of specific Category:         
@@ -39,7 +39,7 @@ use Illuminate\Support\Facades\Route;
  *      a)      Registering / Login / Landing-Page / Categories / Personal Profile Page 
  * 
  *      b)      Specific Activity - Page:               
- *                Route::get('/cities/{city_id}/{category_id}/{activities_id}', ActivityController@show')      ->name('activites.show'); 
+ *                Route::get('/cities/{city_id}/{category_id}/{activities_id}', ActivityController@show')      ->name('activity.show'); 
  * 
  * 4. Specific Activity - Page:
  * ---------------------------- 
@@ -52,12 +52,14 @@ use Illuminate\Support\Facades\Route;
  * 
  * 5. Activity-related Routes: 
  *      1)      Create activity                         
- *                Route::get('/activities/create','ActivityController@create')                                  ->name('activities.create');                                                     
- *                Route::post('/activities', 'ActivityController@store')                                        ->name('activities.store');
+ *                Route::get('/activities/create','ActivityController@create')                                  ->name('activity.create');                                                     
+ *                Route::post('/activities', 'ActivityController@store')                                        ->name('activity.store');
  *  
  *      2)      Edit activity
- *                Route::get('/activities/{activity_id}/edit', 'ActivityController@edit')                       ->name('activities.edit'); 
- *                Route::post('/activities/{activity_id}', 'ActivityController@update')                         ->name('activities.update'); 
+ *                Route::get('/activities/{activity_id}/edit', 'ActivityController@edit')                       ->name('activity.edit'); 
+ *                Route::post('/activities/{activity_id}', 'ActivityController@update')                         ->name('activity.update'); 
+ * 
+ * 6. Personal Profile Page
 
  */    
 /**------------------------------------------------------------------------------------------- */ 
@@ -94,7 +96,10 @@ Route::get('/cities/{city_id}/{category_id}/{activity_id}', 'ActivityController@
 Route::get('/activities/create', 'ActivityController@create')->name('activity.create'); 
 Route::post('/activities', 'ActivityController@store')->name('activity.store'); 
 
-Route::get('/activities/{activity_id}/edit', 'ActivityController@edit')->name('activities.edit'); 
-Route::get('/activities/{activity_id}', 'ActivityController@update')->name('activities.update'); 
+Route::get('/activities/{activity_id}/edit', 'ActivityController@edit')->name('activity.edit'); 
+Route::get('/activities/{activity_id}', 'ActivityController@update')->name('activity.update'); 
+
+// Personal Profile Page: 
+
 
 

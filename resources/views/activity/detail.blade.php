@@ -1,6 +1,6 @@
+<!--Shows the details of one specific Activity-->
+
 @extends('layouts.layout')
-
-
 
 @section('content')
 

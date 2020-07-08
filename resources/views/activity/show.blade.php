@@ -1,3 +1,4 @@
+<!--shows all the Activites of one specific Category in one specific City-->
 
 @extends('layouts.layout')
 @section('content')
