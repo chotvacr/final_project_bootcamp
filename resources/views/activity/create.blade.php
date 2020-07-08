@@ -18,14 +18,14 @@
 
 
 <div>
-<select name="cities[]" id="cities" >
+<select name="city_id" id="cities" >
 @foreach($cities as $city)
 <option value="{{$city->id}}">{{$city->name}}</option>
 @endforeach
 </select>
 </div>
 <div>
-<select name="categories[]" id="categories" >
+<select name="category_id" id="categories" >
 @foreach($categories as $category)
 <option value="{{$category->id}}">{{$category->name}}</option>
 @endforeach

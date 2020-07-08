@@ -54,9 +54,9 @@ class ActivityController extends Controller
                 'description' => 'required|string|max:255',
                 'group_size' => 'required|int|max:255',
                 'price' => 'required|int|max:255',
-                'picture' => 'required|string|max:255',
+                // 'picture' => 'required|string|max:255',
                 'date_time' => 'required|string|max:255',
-                'adress' => 'required|string|max:255',
+                'address' => 'required|string|max:255',
                 'postcode' => 'required|int|max:255',
                 'email' => 'required|string|max:255',
             
