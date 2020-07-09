@@ -18,6 +18,8 @@
 
 
     <div>
+     <input type="hidden" value="{{$user->id}}" name="user_id">
+
         <select name="city_id" id="cities" >
             @foreach($cities as $city)
                 <option value="{{$city->id}}">{{$city->name}}</option>
