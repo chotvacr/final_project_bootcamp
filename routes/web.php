@@ -100,6 +100,6 @@ Route::get('/activities/{activity_id}/edit', 'ActivityController@edit')->name('a
 Route::get('/activities/{activity_id}', 'ActivityController@update')->name('activity.update'); 
 
 // Personal Profile Page: 
-
+Route::get('/profile', 'ProfileController@show')->name('profile.show');
 
 

@@ -1,7 +1,8 @@
 @extends('layouts.layout')
 @section('content')
+{!! include ('css/app.css') !!}
 
-    <h1>Category seleciton</h1>
+    <h1 class="category">Category seleciton</h1>
     <br>
     <br>
 
