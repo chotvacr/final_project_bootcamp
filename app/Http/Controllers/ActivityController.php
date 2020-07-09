@@ -27,6 +27,9 @@ class ActivityController extends Controller
     {
         $city = City::findOrFail($city_id); 
         $activity = Activity::findOrFail($activity_id); 
+        //owner of activity
+        $owner = $activity->user;
+
         $user = User::findOrFail($user_id); 
 
         return view('activity.detail', compact('activity', 'user', 'city')); 

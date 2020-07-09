@@ -1,7 +1,23 @@
 @extends('layouts.app')
 @extends('partials.header')
 
-@section('content')
+ @section('content')
+
+<h1>Welcome {{$user->name}}</h1>
+<h1>Description{{$user->description}}</h1>
+
+<!-- @foreach($user->activities as $activity)
+
+@endforeach
+
+@foreach($user->registered as $registered)
+
+@endforeach -->
+
+@endsection
+
+
+<!--
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -14,8 +30,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ auth()->user()->name }} {{ auth()->user()->surname }}
+                    
+                     auth()->user()->name 
+                     auth()->user()->surname
                 </div>
 
                 <form method="post" action="/">
@@ -23,11 +40,11 @@
 
                     <div>
                         <label>Description</label>
-                        <input type="text" name="description" value="{{ auth()->user()->description }}">
+                        <input type="text" name="description" value=`{{auth()->user()->description}}`">
                     </div>
                     <div>
                         <label>Email</label>
-                        <input type="text" name="description" value="{{ auth()->user()->email }}">
+                        <input type="text" name="description" value="auth()->user()->email">
                     </div>
                                    
     
@@ -51,5 +68,5 @@
             </div>
         </div>
     </div>
-</div>
-@endsection
+</div> -->
+
