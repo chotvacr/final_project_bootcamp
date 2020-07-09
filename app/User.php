@@ -13,6 +13,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Activity');
     }
 
+    public function registered()
+    {
+        return $this->belongsToMany('App\Activity');
+    }
+
 
     use Notifiable;
 

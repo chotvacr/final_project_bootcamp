@@ -66,7 +66,7 @@ use Illuminate\Support\Facades\Route;
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Registration Routes...
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
@@ -100,6 +100,6 @@ Route::get('/activities/{activity_id}/edit', 'ActivityController@edit')->name('a
 Route::get('/activities/{activity_id}', 'ActivityController@update')->name('activity.update'); 
 
 // Personal Profile Page: 
-Route::get('/profile', 'ProfileController@show')->name('profile.show');
+Route::get('/profile/{user_id}', 'ProfileController@show')->name('profile.show');
 
 

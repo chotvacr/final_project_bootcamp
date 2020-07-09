@@ -28,32 +28,32 @@
         @elseif(Route::current()->getName() == 'activity.detail')
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
-                <a class="nav-link" href="/cities/{{ $city->id }}/categories">sdsds</a>
-                <a class="nav-link" href="">Blasdlfkjasdflj</a>
+                <a class="nav-link" href="/cities/{{ $city->id }}/categories">Categories</a>
+                <a class="nav-link" href="/cities/{city_id}/{category_id}/activities">Activities</a>
             </li>
         @endif
     @endguest
 
     @auth
         <li class="nav-item">
-            <a class="nav-link" href="">Personal Page</a>
-            <a class="nav-link" href="">Create Activity</a>
-            <a class="nav-link" href="">Logout</a>
+            <a class="nav-link" href="/profile/{{ $user->id }}">Personal Page</a>
+            <a class="nav-link" href="/activities/create">Create Activity</a>
+            <a class="nav-link" href="/logout">Logout</a>
         </li>
         @if (Route::current()->getName() == 'city.show')
             <li class="nav-item">
-                <a class="nav-link" href="">Home</a> 
+                <a class="nav-link" href="/">Home</a> 
             </li>
         @elseif(Route::current()->getName() == 'activity.show')
             <li class="nav-item">
-                <a class="nav-link" href="">Home</a>
-                <a class="nav-link" href="">Categories</a>
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/cities/{{ $city->id }}/categories">Categories</a>
             </li>
         @elseif(Route::current()->getName() == 'activity.detail')
             <li class="nav-item">
-                <a class="nav-link" href="">Home</a>
-                <a class="nav-link" href="">Categories</a>
-                <a class="nav-link" href="">Activities</a>
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/cities/{{ $city->id }}/categories">Categories</a>
+                <a class="nav-link" href="/cities/{city_id}/{category_id}/activities">Activities</a>
             </li>
         @endif
     @endauth
