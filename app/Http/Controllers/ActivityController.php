@@ -98,7 +98,7 @@ class ActivityController extends Controller
         $activity = Activity::findOrFail($activity_id); 
         $user->activities()->attach($activity_id);
 
-        return redirect(action('activity.registerActivity', $user->id, $activity));
+        return redirect(action('activity.registerActivity', $user->id, $activity->id));
     }
    
 }

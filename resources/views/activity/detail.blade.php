@@ -31,9 +31,10 @@
         <p>{{ $activity->description }}</p>
     </div>
 
-
+    @auth
     <form method="post" action="{{ action('ActivityController@registerActivity') }}">
     @csrf
+       
         <input type="hidden" value="" name="{{Auth::user()->id}}">
         <input type="hidden" value="" name="{{ $activity->id }}">
           
@@ -41,8 +42,13 @@
 
     <button type="submit">Register for this activity</button>
     </form>
+    @endauth
 
-
+    @guest
+    <form method="get" action="/login">
+    <button type="submit">Log in to register for this activity</button>
+    </form>
+    @endguest
 
     <div class="activity--about">
         <h2>About me</h2>

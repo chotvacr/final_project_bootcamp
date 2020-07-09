@@ -8,8 +8,8 @@
 
     @foreach ($activities as $activity)
     <div>
-
-        <h2>{{ $activity->name }}</h2>
+            
+        <h2> <a href="{{ route('activity.detail', [$category->id, $city->id, $activity->id]) }}"> {{ $activity->name }}</a></h2>
         <p>Group size: {{$activity->group_size}}</p>
         <p>Starts: {{$activity->date_time}}</p>
         <p>Where: {{$activity->adress}}</p>
@@ -21,7 +21,7 @@
     </div>
         <button href="activity/register">register for this activity</button>
     @endforeach
-        
+
   
     
 
