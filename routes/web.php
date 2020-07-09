@@ -91,7 +91,7 @@ Route::get('/cities/{city_id}/{category_id}/activities', 'ActivityController@sho
 
 // 4. Specific Activity: 
 Route::get('/cities/{city_id}/{category_id}/{activity_id}', 'ActivityController@detail')->name('activity.detail'); 
-Route::post('/store', 'ActivityController@registerActivity')->name('activity.registerActivity'); 
+Route::post('/store', 'ActivityController@register')->name('activity.register'); 
 
 // 5. Activity-related Routes: 
 Route::get('/activities/create', 'ActivityController@create')->name('activity.create'); 
