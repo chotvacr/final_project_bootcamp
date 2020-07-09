@@ -13,12 +13,21 @@
         </div>
     @endif
 
-    <form method="post" action="/activities">
+    <form method="post" action="{{ action('ActivityController@store') }}">
     @csrf
 
 
     <div>
-     <input type="hidden" value="{{$user->id}}" name="user_id">
+        <input type="hidden" value="" name="user_id">
+   
+           <select name="user_id" id="users" >
+            <option value="{{Auth::user()->id}}">{{Auth::user()->name}}</option>
+           </select>
+   
+       </div>
+
+    <div>
+     <input type="hidden" value="" name="city_id">
 
         <select name="city_id" id="cities" >
             @foreach($cities as $city)
@@ -36,7 +45,7 @@
         </select>
     </div>
 
-    
+
     <div>
         <label>Name</label>
         <input type="text" name="name">
@@ -59,8 +68,9 @@
 
     <div>
         <label>Date and Time of Activity</label>
-        <input type="datetime-local" name="date_time" >
+        <input type="date_time" name="date_time" value="2020-02-12T19:30">
     </div>
+    
 
     <div>
         <label>Address of activity</label>

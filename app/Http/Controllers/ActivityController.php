@@ -35,13 +35,14 @@ class ActivityController extends Controller
         return view('activity.detail', compact('activity', 'user', 'city')); 
     }
 
-    public function create($user_id)
+    public function create()
     {
         $activities = Activity::all();
         $cities = City::all(); 
         $categories = Category::all(); 
-        $user = User::findOrFail($user_id); 
-        return view('activity.create', compact('activities', 'cities', 'categories', 'user'));
+        $users = User::all(); 
+       
+        return view('activity.create', compact('activities', 'cities', 'categories', 'users'));
     }
 
     public function store(Request $request)
@@ -73,6 +74,7 @@ class ActivityController extends Controller
         $activity->group_size = $request->input('group_size');
         $activity->price = $request->input('price');
         $activity->date_time = $request->input('date_time');
+        $activity->address = $request->input('address');
         $activity->postcode = $request->input('group_size');
         $activity->email = $request->input('email');
         $activity->save();
@@ -83,7 +85,7 @@ class ActivityController extends Controller
         //$bookshop->books()->sync($books_ids);
             
             
-        return redirect('CityController@index');
+        return redirect('/');
 
     }
 

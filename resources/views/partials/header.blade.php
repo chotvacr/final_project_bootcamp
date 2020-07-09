@@ -36,7 +36,7 @@
 
     @auth
         <li class="nav-item">
-            <a class="nav-link" href="/profile/{{ $user->id }}">Personal Page</a>
+            
             <a class="nav-link" href="/activities/create">Create Activity</a>
             <a class="nav-link" href="/logout">Logout</a>
         </li>
@@ -54,6 +54,7 @@
                 <a class="nav-link" href="/">Home</a>
                 <a class="nav-link" href="/cities/{{ $city->id }}/categories">Categories</a>
                 <a class="nav-link" href="/cities/{city_id}/{category_id}/activities">Activities</a>
+                <a class="nav-link" href="/profile/{{ $user->id }}">Personal Page</a>
             </li>
         @endif
     @endauth
