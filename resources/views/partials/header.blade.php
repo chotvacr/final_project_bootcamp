@@ -5,35 +5,58 @@
     Activity-Page: Home, Categories, Login, Register, Personal Page, Log-out, Create Activity
 -->
 
-<img src="{{ asset('img/logo.png') }}" alt="blabla">
+<div class="header--container">
 
-@guest
-    <a href="">Login</a>   
-    <a href="">Register</a>
-    @if (Route::current()->getName() == 'city.show')
-        <a href="">Home</a>
-    @elseif(Route::current()->getName() == 'activity.show')
-        <a href="">Home</a>
-        <a href="">Categories</a>
-    @elseif(Route::current()->getName() == 'activity.detail')
-        <a href="">Home</a>
-        <a href="">Categories</a>
-        <a href="">Activities</a>
-    @endif
-@endguest
+    <!--Logo for Header-->
+    <img src="{{ asset('img/logo.png') }}" alt="blabla" class="header--image">
 
-@auth
-    <a href="">Personal Page</a>
-    <a href="">Create Activity</a>
-    <a href="">Logout</a>
-    @if (Route::current()->getName() == 'city.show')
-        <a href="">Home</a>
-    @elseif(Route::current()->getName() == 'activity.show')
-        <a href="">Home</a>
-        <a href="">Categories</a>
-    @elseif(Route::current()->getName() == 'activity.detail')
-        <a href="">Home</a>
-        <a href="">Categories</a>
-        <a href="">Activities</a>
-    @endif
-@endauth
+    <!--Links for Header depending on Authentication-->
+    @guest
+        <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>   
+            <a class="nav-link" href="/register">Register</a>
+        </li>
+        @if (Route::current()->getName() == 'city.show')
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>    
+        @elseif(Route::current()->getName() == 'activity.show')
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/cities/{{ $city->id }}/categories">Categories</a>
+            </li>
+        @elseif(Route::current()->getName() == 'activity.detail')
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/cities/{{ $city->id }}/categories">sdsds</a>
+                <a class="nav-link" href="">Blasdlfkjasdflj</a>
+            </li>
+        @endif
+    @endguest
+
+    @auth
+        <li class="nav-item">
+            <a class="nav-link" href="">Personal Page</a>
+            <a class="nav-link" href="">Create Activity</a>
+            <a class="nav-link" href="">Logout</a>
+        </li>
+        @if (Route::current()->getName() == 'city.show')
+            <li class="nav-item">
+                <a class="nav-link" href="">Home</a> 
+            </li>
+        @elseif(Route::current()->getName() == 'activity.show')
+            <li class="nav-item">
+                <a class="nav-link" href="">Home</a>
+                <a class="nav-link" href="">Categories</a>
+            </li>
+        @elseif(Route::current()->getName() == 'activity.detail')
+            <li class="nav-item">
+                <a class="nav-link" href="">Home</a>
+                <a class="nav-link" href="">Categories</a>
+                <a class="nav-link" href="">Activities</a>
+            </li>
+        @endif
+    @endauth
+</div>
+
+

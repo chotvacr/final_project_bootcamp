@@ -12,28 +12,23 @@ use Illuminate\Http\Request;
 class ActivityController extends Controller
 {
     
-    public function index()
+    public function show($category_id, $city_id)
     {
-        $activities = Activity::all(); 
-        return view('activity.index', compact('activities')); 
-    }
-    
-
-    public function show($category_id)
-    {
+        $city = City::findOrFail($city_id); 
         $category = Category::findOrFail($category_id); 
         $activities = Activity::where('category_id', $category_id)->get(); 
 
-        return view('activity.index', compact('category', 'activities')); 
+        return view('activity.show', compact('category', 'activities', 'city')); 
 
     }
 
-    public function detail($activity_id, $user_id)
+    public function detail($activity_id, $user_id, $city_id)
     {
+        $city = City::findOrFail($city_id); 
         $activity = Activity::findOrFail($activity_id); 
         $user = User::findOrFail($user_id); 
 
-        return view('activity.detail', compact('activity', 'user')); 
+        return view('activity.detail', compact('activity', 'user', 'city')); 
     }
 
     public function create()

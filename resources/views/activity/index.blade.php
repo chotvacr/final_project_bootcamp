@@ -15,7 +15,7 @@
     <script src="{{ mix('js/activities.js') }}"></script>
  
 </body>
-</html> -->
+</html> 
 
 @extends('layouts.layout')
 @section('content')
@@ -38,3 +38,4 @@
       @endforeach
    
 @endsection
+-->

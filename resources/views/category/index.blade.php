@@ -1,3 +1,4 @@
+<!--Not being used
 @extends('layouts.layout')
 @section('content')
 
@@ -16,4 +17,8 @@
     @endforeach
 
 @endsection
+-->
 
+@foreach ($cities as $city)
+    <h1>hello</h1>
+@endforeach
