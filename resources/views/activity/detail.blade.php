@@ -12,6 +12,7 @@
 
     <div class="activity--headline">
         <h1>{{ $activity->name }}</h1>
+        
         <button>Sign in</button>
         <button>show my list of activities</button>
     </div>
@@ -30,10 +31,23 @@
         <p>{{ $activity->description }}</p>
     </div>
 
+
+    <form method="post" action="{{ action('ActivityController@registerActivity') }}">
+    @csrf
+        <input type="hidden" value="" name="{{Auth::user()->id}}">
+        <input type="hidden" value="" name="{{ $activity->id }}">
+          
+
+
+    <button type="submit">Register for this activity</button>
+    </form>
+
+
+
     <div class="activity--about">
         <h2>About me</h2>
         <img src="" alt="">
-        <p>{{ $user->description }}</p>
+        <p>{{ $owner->description }}</p>
         <p>Contact: {{ $activity->email }}</p>
     </div class="activity--related">
         <h2>More Activities by that teacher</h2>

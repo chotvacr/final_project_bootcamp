@@ -10,7 +10,7 @@ class User extends Authenticatable
 {
     public function activities()
     {
-        return $this->hasMany('App\Activity');
+        return $this->belongsToMany('App\Activity');
     }
 
     public function registered()

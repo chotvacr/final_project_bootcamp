@@ -17,8 +17,8 @@
     @csrf
 
 
-    <div>
-        <input type="hidden" value="" name="user_id">
+        <div>
+       
    
            <select name="user_id" id="users" >
             <option value="{{Auth::user()->id}}">{{Auth::user()->name}}</option>
@@ -27,7 +27,7 @@
        </div>
 
     <div>
-     <input type="hidden" value="" name="city_id">
+    
 
         <select name="city_id" id="cities" >
             @foreach($cities as $city)
@@ -68,7 +68,7 @@
 
     <div>
         <label>Date and Time of Activity</label>
-        <input type="date_time" name="date_time" value="2020-02-12T19:30">
+        <input type="datetime-local" name="date_time" value="2020-02-12T19:30">
     </div>
     
 

@@ -23,16 +23,17 @@ class ActivityController extends Controller
 
     }
 
-    public function detail($activity_id, $user_id, $city_id)
+    public function detail($city_id,$category_id,$activity_id)
     {
         $city = City::findOrFail($city_id); 
         $activity = Activity::findOrFail($activity_id); 
         //owner of activity
         $owner = $activity->user;
+        
+        $user = auth()->user(); 
+         
 
-        $user = User::findOrFail($user_id); 
-
-        return view('activity.detail', compact('activity', 'user', 'city')); 
+        return view('activity.detail', compact('activity', 'city', 'owner','user')); 
     }
 
     public function create()
@@ -89,6 +90,15 @@ class ActivityController extends Controller
 
     }
 
-    
+    public function registerActivity(Request $request)
+    {
+        
+        $user = auth()->user(); 
+        $activity_id = $request->input('activity_id');
+        $activity = Activity::findOrFail($activity_id); 
+        $user->activities()->attach($activity_id);
+
+        return redirect(action('activity.registerActivity', $user->id, $activity));
+    }
    
 }

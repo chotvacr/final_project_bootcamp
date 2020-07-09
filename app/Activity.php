@@ -20,4 +20,9 @@ class Activity extends Model
     {
         return $this->belongsTo('App\user');
     }
+
+    public function registered()
+    {
+        return $this->belongsToMany('App\user');
+    }
 }
