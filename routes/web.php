@@ -84,23 +84,33 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('/', 'CityController@index')->name('city.index'); // works 
 
 // 2. Categories of selected City:
+        // show all available Categories in certain City: 
 Route::get('/cities/{city_id}/categories', 'CityController@show')->name('city.show'); // works
 
 // 3. Overview Activities: 
+        // show all available Activities in certain Category
 Route::get('/cities/{city_id}/{category_id}/activities', 'ActivityController@show')->name('activity.show'); 
 
 // 4. Specific Activity: 
+        // Show the Detail of the Activity: 
 Route::get('/cities/{city_id}/{category_id}/{activity_id}', 'ActivityController@detail')->name('activity.detail'); 
+        // Register a logged-in user to that activity: 
 Route::post('/store', 'ActivityController@registerActivity')->name('activity.registerActivity'); 
 
 // 5. Activity-related Routes: 
+    // Create a new Activity as logged-in User: 
 Route::get('/activities/create', 'ActivityController@create')->name('activity.create'); 
+    // Store a new Activity: 
 Route::post('/activities', 'ActivityController@store')->name('activity.store'); 
 
+    // Edit one of your created Activites: 
 Route::get('/activities/{activity_id}/edit', 'ActivityController@edit')->name('activity.edit'); 
+    // Update your created Activity: 
 Route::get('/activities/{activity_id}', 'ActivityController@update')->name('activity.update'); 
 
 // Personal Profile Page: 
 Route::get('/profile/{user_id}', 'ProfileController@show')->name('profile.show');
+Route::get( '/profile/{user_id}/edit', 'ProfileController@edit')   ->name('profile.edit');
+Route::post( '/profile/{user_id}',      'ProfileController@update') ->name('profile.update');
 
 

@@ -10,7 +10,7 @@
     <div class="category">
         <h3>{{ $category->name }}</h3>
         <p>{{ $category->description }}</p>
-        <button class="button" type="button" onclick="window.location='{{ route('activity.show', [$category->id, $city->id]) }}'">Join {{ $category->name }}!</button>
+        <button class="button" type="button" onclick="window.location='{{ route('activity.show', [$city->id, $category->id]) }}'">Join {{ $category->name }}!</button>
     </div>
 @endforeach
 
