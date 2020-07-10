@@ -90,7 +90,7 @@ class ActivityController extends Controller
         return redirect('/');
 
     }
-  
+//   Registration of activity by participant - creation of line in pivot table user_activity 
     public function registerActivity(Request $request)
     {
         
@@ -102,9 +102,12 @@ class ActivityController extends Controller
 
         return redirect(action('ActivityController@detail', [$activity->city_id,$activity->category_id,$activity->id ]));
     }
-
-    public function removeActivity($activity_id, Request $request){
+// This is activity that user delete  - delete line (activity) in activities table
+    
+public function removeActivity(Request $request){
+        $activity_id = $request->input('activity_id');
         $activity = Activity::findOrFail($activity_id);
+        dd($activity);
 
         $book_id = $request->input('book_id');
         $bookshop->books()->detach($book_id);
@@ -112,22 +115,15 @@ class ActivityController extends Controller
         return redirect(action('BookshopController@show', $bookshop->id));
     }
 
+
+// This is activity that participant (user) remove from his registered activity  - delete line in pivot table user_activity
     public function removeUser(Request $request)
     {
         $user = auth()->user(); 
         $activity_id = $request->input('actvity_id'); 
         $activity = Activity::findOrFail($activity_id); 
 
-        $user->registered()->detach($activity_id)
+        $user->registered()->detach($activity_id);
     }
-
-    public function removeBook($bookshop_id, Request $request){
-        $bookshop = Bookshop::findOrFail($bookshop_id);
-
-        $book_id = $request->input('book_id');
-        $bookshop->books()->detach($book_id);
-
-        return redirect(action('BookshopController@show', $bookshop->id));
-    }
-   
+  
 }
