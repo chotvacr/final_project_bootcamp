@@ -105,19 +105,17 @@ class ActivityController extends Controller
 // This is activity that user delete  - delete line (activity) in activities table
     
 public function removeActivity(Request $request){
+        $user = auth()->user(); 
         $activity_id = $request->input('activity_id');
         $activity = Activity::findOrFail($activity_id);
-        dd($activity);
-
-        $book_id = $request->input('book_id');
-        $bookshop->books()->detach($book_id);
-
-        return redirect(action('BookshopController@show', $bookshop->id));
+        
+        $activity->delete();
+        return redirect('/');
     }
 
 
 // This is activity that participant (user) remove from his registered activity  - delete line in pivot table user_activity
-    public function removeUser(Request $request)
+    public function removeRegistration(Request $request)
     {
         $user = auth()->user(); 
         $activity_id = $request->input('actvity_id'); 

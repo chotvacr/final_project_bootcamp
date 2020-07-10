@@ -19,7 +19,7 @@
                 <h3>{{ $activity->name }}</h3>
                 <p>{{ $activity->description }}</p>
             </div>
-            <form action="{{ action('ActivityController@removeActivity') }}" method="post">
+            <form action="{{ action('ActivityController@removeActivity', 'Auth::user()->id', 'Auth::activity()->id' ) }}" method="post">
                 @csrf
                 <input type="hidden" name="activity_id" value="{{ $activity->id }}">
                 <button type="submit">Remove Activity</button>
@@ -29,6 +29,13 @@
         <h1>These are my registered activities: </h1>
         @foreach ($registered as $activity)
             <h1>{{ $activity->name }}</h1>
+            <form action="{{ action('ActivityController@removeRegistration', 'Auth::user()->id', 'Auth::activity()->id' ) }}" method="post">
+                @csrf
+                <input type="hidden" name="registered->activity_id" value="{{ register->activityid }}">
+                <input type="hidden" name="registered->user_id" value="{{ register->userid }}">
+                <button type="submit">I want no longer be part of this activity</button>
+            </form>
+
         @endforeach
 
     @endauth
