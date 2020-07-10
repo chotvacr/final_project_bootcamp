@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 class ActivityController extends Controller
 {
     
-    public function show($category_id, $city_id)
+    public function show( $city_id,$category_id)
     {
         $city = City::findOrFail($city_id); 
         $category = Category::findOrFail($category_id); 
@@ -32,7 +32,7 @@ class ActivityController extends Controller
         $owner = $activity->user;
         
         $user = auth()->user(); 
-         
+        // return $activity; 
 
         return view('activity.detail', compact('activity', 'city', 'owner','user', 'category')); 
     }
@@ -118,10 +118,12 @@ public function removeActivity(Request $request){
     public function removeRegistration(Request $request)
     {
         $user = auth()->user(); 
-        $activity_id = $request->input('actvity_id'); 
+        $activity_id = $request->input('activity_id');
         $activity = Activity::findOrFail($activity_id); 
-
+       
         $user->registered()->detach($activity_id);
+        
+         return redirect(action('ProfileController@show', $user->id));
     }
   
 }

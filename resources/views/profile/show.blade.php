@@ -31,9 +31,9 @@
             <h1>{{ $activity->name }}</h1>
             <form action="{{ action('ActivityController@removeRegistration', 'Auth::user()->id', 'Auth::activity()->id' ) }}" method="post">
                 @csrf
-                <input type="hidden" name="registered->activity_id" value="{{ register->activityid }}">
-                <input type="hidden" name="registered->user_id" value="{{ register->userid }}">
-                <button type="submit">I want no longer be part of this activity</button>
+                <input type="hidden" name="activity_id" value="{{ $activity->id }}">
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                <button type="submit">Remove Activity</button>
             </form>
 
         @endforeach

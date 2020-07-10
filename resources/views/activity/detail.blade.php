@@ -52,10 +52,13 @@
     @endguest
 
     <div class="activity--about">
+        @if ($owner !== null) 
         <h2>About me</h2>
         <img src="" alt="">
+
         <p>{{ $owner->description }}</p>
         <p>Contact: {{ $activity->email }}</p>
+        @endif
     </div class="activity--related">
         <h2>More Activities by that teacher</h2>
     <div>
