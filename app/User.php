@@ -15,7 +15,7 @@ class User extends Authenticatable
 
     public function registered()
     {
-        return $this->belongsToMany('App\Activity');
+        return $this->belongsToMany('App\Activity', 'activity_user');
     }
 
 

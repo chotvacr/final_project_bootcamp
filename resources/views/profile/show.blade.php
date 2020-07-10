@@ -23,7 +23,7 @@
         @endforeach
 
         <h1>These are my registered activities: </h1>
-        @foreach ($user->activities as $activity)
+        @foreach ($registered as $activity)
             <h1>{{ $activity->name }}</h1>
         @endforeach
 

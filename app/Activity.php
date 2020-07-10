@@ -23,6 +23,6 @@ class Activity extends Model
 
     public function registered()
     {
-        return $this->belongsToMany('App\user');
+        return $this->belongsToMany('App\user', 'activity_user');
     }
 }
