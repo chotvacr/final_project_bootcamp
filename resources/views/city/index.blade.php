@@ -16,12 +16,6 @@
     @endforeach
   </select>
 
-<script>
-    const redirectTo = () => {
-      location.href = "/cities/{{ $city->id }}/categories"
-      }
-  </script>
-
 
   @guest 
             @if (Route::has('login'))

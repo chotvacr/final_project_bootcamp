@@ -6,7 +6,6 @@
     @auth
         <h1>Welcome {{Auth::user()->name}}</h1>
 
-        
         <div>
             <h1>Personal Details: </h1>
             <h2>{{Auth::user()->name}}</h2>
@@ -20,13 +19,17 @@
                 <h3>{{ $activity->name }}</h3>
                 <p>{{ $activity->description }}</p>
             </div>
+            <form action="{{ action('ActivityController@removeActivity')}}" method="post">
+                @csrf
+                <input type="hidden" name="activity_id" value="{{ $activity->id }}">
+                <button type="submit">Remove Activity</button>
+            </form>
         @endforeach
 
         <h1>These are my registered activities: </h1>
         @foreach ($registered as $activity)
             <h1>{{ $activity->name }}</h1>
         @endforeach
-
 
     @endauth
 

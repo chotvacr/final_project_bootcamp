@@ -29,7 +29,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
                 <a class="nav-link" href="/cities/{{ $city->id }}/categories">Categories</a>
-                <a class="nav-link" href="/cities/{city_id}/{category_id}/activities">Activities</a>
+                <a class="nav-link" href="/cities/{{ $city->id }}/{{ $category->id }}/activities">Activities</a>
             </li>
         @endif
     @endguest
@@ -39,6 +39,7 @@
             
             <a class="nav-link" href="/activities/create">Create Activity</a>
             <a class="nav-link" href="/logout">Logout</a>
+            <a class="nav-link" href="/profile/{{ Auth::user()->id }}">Profile Page</a>
         </li>
         @if (Route::current()->getName() == 'city.show')
             <li class="nav-item">
@@ -53,8 +54,16 @@
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
                 <a class="nav-link" href="/cities/{{ $city->id }}/categories">Categories</a>
-                <a class="nav-link" href="/cities/{city_id}/{category_id}/activities">Activities</a>
                 <a class="nav-link" href="/profile/{{ $user->id }}">Personal Page</a>
+            </li>
+        @elseif(Route::current()->getName() == 'activity.create')
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/cities/{{ $city->id }}/categories">Categories</a>
+            </li>
+        @elseif(Route::current()->getName() == 'profile.show')
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
             </li>
         @endif
     @endauth

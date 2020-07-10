@@ -13,8 +13,9 @@
 
     <div class="activity--headline">
         <h1>{{ $activity->name }}</h1>
-        <button>Sign in</button>
+        @auth
         <button>show my list of activities</button>
+        @endauth
     </div>
 
     <div class="activity--facts">

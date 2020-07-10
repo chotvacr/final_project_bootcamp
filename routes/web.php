@@ -108,9 +108,10 @@ Route::get('/activities/{activity_id}/edit', 'ActivityController@edit')->name('a
     // Update your created Activity: 
 Route::get('/activities/{activity_id}', 'ActivityController@update')->name('activity.update'); 
 
+
 // Personal Profile Page: 
 Route::get('/profile/{user_id}', 'ProfileController@show')->name('profile.show');
 Route::get( '/profile/{user_id}/edit', 'ProfileController@edit')   ->name('profile.edit');
 Route::post( '/profile/{user_id}',      'ProfileController@update') ->name('profile.update');
-
+Route::post('/profile/{user_id}/remove', 'AcitivyController@removeActivity');
 

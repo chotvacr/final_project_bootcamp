@@ -19,7 +19,7 @@
         <p>Contact: {{ $activity->email }}</p>
         <p>Course Description: {{ $activity->description }}</p>
     </div>
-        <button href="activity/register">register for this activity</button>
+        
     @endforeach
 
   

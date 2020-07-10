@@ -25,6 +25,7 @@ class ActivityController extends Controller
 
     public function detail($city_id,$category_id,$activity_id)
     {
+        $category = Category::findOrFail($category_id);
         $city = City::findOrFail($city_id); 
         $activity = Activity::findOrFail($activity_id); 
         //owner of activity
@@ -33,7 +34,7 @@ class ActivityController extends Controller
         $user = auth()->user(); 
          
 
-        return view('activity.detail', compact('activity', 'city', 'owner','user')); 
+        return view('activity.detail', compact('activity', 'city', 'owner','user', 'category')); 
     }
 
     public function create()
@@ -100,6 +101,33 @@ class ActivityController extends Controller
         $user->registered()->attach($activity_id);
 
         return redirect(action('ActivityController@detail', [$activity->city_id,$activity->category_id,$activity->id ]));
+    }
+
+    public function removeActivity($activity_id, Request $request){
+        $activity = Activity::findOrFail($activity_id);
+
+        $book_id = $request->input('book_id');
+        $bookshop->books()->detach($book_id);
+
+        return redirect(action('BookshopController@show', $bookshop->id));
+    }
+
+    public function removeUser(Request $request)
+    {
+        $user = auth()->user(); 
+        $activity_id = $request->input('actvity_id'); 
+        $activity = Activity::findOrFail($activity_id); 
+
+        $user->registered()->detach($activity_id)
+    }
+
+    public function removeBook($bookshop_id, Request $request){
+        $bookshop = Bookshop::findOrFail($bookshop_id);
+
+        $book_id = $request->input('book_id');
+        $bookshop->books()->detach($book_id);
+
+        return redirect(action('BookshopController@show', $bookshop->id));
     }
    
 }

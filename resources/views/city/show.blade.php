@@ -8,9 +8,14 @@
 
 @foreach ($categories as $category)
     <div class="category">
+        <h2> <a href="{{ route('activity.show', [$city->id, $category->id]) }}">{{ $category->name }}</a></h2>
         <h3>{{ $category->name }}</h3>
         <p>{{ $category->description }}</p>
-        <button class="button" type="button" onclick="window.location='{{ route('activity.show', [$city->id, $category->id]) }}'">Join {{ $category->name }}!</button>
+        
+        <form method="get" action="/cities/{{ $city->id }}/{{ $category->id }}/activities">
+        <button type="submit">See all activities</button>
+        </form>
+        
     </div>
 @endforeach
 
