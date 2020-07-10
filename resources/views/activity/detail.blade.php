@@ -35,11 +35,11 @@
 
 
     
-    <form method="POST" action="{{ action('ActivityController@register') }}">
+    <form method="POST" action="{{ action('ActivityController@registerActivity') }}">
     @csrf
        
-        <input type="hidden" value="{{Auth::user()->id}}" name="{{Auth::user()->id}}">
-        <input type="hidden" value="{{$activity->id}}" name="{{ $activity->id }}">
+        <input type="hidden" value="{{Auth::user()->id}}" name="user_id">
+        <input type="hidden" value="{{$activity->id}}" name="activity_id">
           
 
 

@@ -89,43 +89,17 @@ class ActivityController extends Controller
         return redirect('/');
 
     }
-
-    public function register(Request $request)
-    { 
-        $this->validate($request, 
-            [
-                'user_id' => 'required',
-                'activity_id' => 'required',
-               
-            ]
-        ); 
-
-        $user_activity = new Activity;
-        $user_activity->user_id= $request->input('user_id');
-        $user_activity->activity_id = $request->input('activity_id');
-       
-        $user_activity->save();
-    
-    
-        //$activities_ids->$request->input('activities');
-            
-        //$bookshop->books()->sync($books_ids);
-            
-            
-        return redirect('activity.register');
-    }
-
-    // public function registerActivity(Request $request)
-    // {
+  
+    public function registerActivity(Request $request)
+    {
         
-    //     $user_id = auth()->user(); 
-    //     $activity = Activity::findOrFail($activity_id); 
-            
-    //     $activity_id = $request->input('activity_id');
-    //     dd($activity_id)   ;
-    //     $user_id->activities()->attach($activity_id);
+        $user = auth()->user(); 
+        $activity_id = $request->input('activity_id');
+        $activity = Activity::findOrFail($activity_id); 
+       
+        $user->registered()->attach($activity_id);
 
-    //     return redirect(action('ActivityController@registerActivity', $user_id));
-    // }
+        return redirect(action('ActivityController@detail', [$activity->city_id,$activity->category_id,$activity->id ]));
+    }
    
 }
