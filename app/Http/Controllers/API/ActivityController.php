@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -15,9 +15,8 @@ class ActivityController extends Controller
             ->limit(5)
             ->get();
       
-    dd($activity);
-    
-}
+    return $activity;
+ }
 
        
 }

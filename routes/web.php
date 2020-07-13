@@ -121,5 +121,6 @@ Route::post('/search', 'ActivityController@search')->name('activity.search');
 
 // Route::view('/api/activity','welcome');
 
+Route::view('/activityreactlist', 'welcome');
 
 
