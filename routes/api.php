@@ -17,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+
+    // define your protected routes in here
+    Route::get('/activity', 'API\ActivityController@index');
+    
+
+
+
+

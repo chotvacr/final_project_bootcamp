@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -11,13 +11,14 @@ class ActivityController extends Controller
 {
     public function index()
     {
-        $activity = Activity::
-            ->orderBy('name')
+        $activity = Activity::orderBy('name')
             ->limit(5)
             ->get();
       
-        }
+    dd($activity);
+    
+}
 
-        return $activity;
+       
 }
 
