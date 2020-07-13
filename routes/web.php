@@ -119,5 +119,6 @@ Route::post( '/profile/{user_id}',      'ProfileController@update') ->name('prof
 //Search-Bar: 
 Route::post('/search', 'ActivityController@search')->name('activity.search'); 
 
+Route::view('/react','welcome');
 
 
