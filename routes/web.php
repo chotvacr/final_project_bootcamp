@@ -116,4 +116,8 @@ Route::get('/profile/{user_id}', 'ProfileController@show')->name('profile.show')
 Route::get( '/profile/{user_id}/edit', 'ProfileController@edit')   ->name('profile.edit');
 Route::post( '/profile/{user_id}',      'ProfileController@update') ->name('profile.update');
 
+//Search-Bar: 
+Route::post('/search', 'ActivityController@search')->name('activity.search'); 
+
+
 

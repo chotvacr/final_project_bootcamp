@@ -9,6 +9,7 @@ use App\Category;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input; 
 
 class ActivityController extends Controller
 {
@@ -17,7 +18,10 @@ class ActivityController extends Controller
     {
         $city = City::findOrFail($city_id); 
         $category = Category::findOrFail($category_id); 
-        $activities = Activity::where('category_id', $category_id)->get(); 
+        $activities = Activity::where([
+            ['city_id', $city_id], 
+            ['category_id', $category_id], 
+        ])->get(); 
 
         return view('activity.show', compact('category', 'activities', 'city')); 
 
@@ -98,12 +102,16 @@ class ActivityController extends Controller
         $activity_id = $request->input('activity_id');
         $activity = Activity::findOrFail($activity_id); 
        
+        if ($user->registered()->where('activity_id', $activity_id)->exists())
+        {
+            return "You are already registered. Please search for another Activity!";  
+        }         
         $user->registered()->attach($activity_id);
+        $activity->decrement('group_size'); 
 
         return redirect(action('ActivityController@detail', [$activity->city_id,$activity->category_id,$activity->id ]));
     }
-// This is activity that user delete  - delete line (activity) in activities table
-    
+// Owner of Activity deletes a complete Activity  
 public function removeActivity(Request $request){
         $user = auth()->user(); 
         $activity_id = $request->input('activity_id');
@@ -122,8 +130,33 @@ public function removeActivity(Request $request){
         $activity = Activity::findOrFail($activity_id); 
        
         $user->registered()->detach($activity_id);
+        $activity->increment('group_size'); 
         
-         return redirect(action('ProfileController@show', $user->id));
+        return redirect(action('ProfileController@show', $user->id));
     }
   
+    public function search(Request $request)
+    {
+        
+        $activity_input = $request->input('activity_input'); 
+        $city_id = $request->input('city_id'); 
+        $category_id = $request->input('category_id'); 
+        
+        $activities = Activity::where([
+            ['city_id', $city_id], 
+            ['category_id', $category_id], 
+            ['name', 'LIKE', '%' . $activity_input . '%'],
+        ])->get(); 
+        
+        $city = City::findOrFail($city_id); 
+        $category = Category::findOrFail($category_id);
+
+        return view('activity.show', compact('category', 'activities', 'city')); 
+
+    }
+
+    
+
+
+    
 }

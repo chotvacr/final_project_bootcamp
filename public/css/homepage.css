@@ -1,0 +1,18 @@
+body {
+   color: #3e6663;
+   background-color:  #f4f3f1;
+   
+}
+.homepage--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.home--headline{
+    font-variant: small-caps;
+   
+}
+

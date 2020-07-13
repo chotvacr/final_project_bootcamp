@@ -1,44 +1,39 @@
 <!--shows the Landing page-->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/homepage.css') }}" >
 
 @extends('layouts.layout')
 @section('content')
 
-  <h1>Landing Page</h1>
+    <div class="homepage--container">
+        
+        <h1 class="home--headline">Ready for an adventure?</h1>
+        <h2 class="home--secondHeadline">Meet your Neighborhood and start exploring!</h2>
 
-  <h2>Ready for an adventure?</h2>
+        <div class="home--nav">
+            <h3>Cities: </h3>
+            @foreach ($cities as $city)
+                <a href="/cities/{{ $city->id }}/categories"">{{$city->name}}</a>
+            @endforeach
+        </div>
 
-  <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-  <option value="">Select...</option>
+        
+        
+    </div>
 
-  <!-- <select name="cities" id="cities"> -->
-    @foreach ($cities as $city)
-    <option value="/cities/{{ $city->id }}/categories"> {{$city->name}}</option>
-    @endforeach
-  </select>
+@endsection 
+
+<!--
+This is an option for the selection: 
+<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+            <option value="">Select...</option>
+        
+                @foreach ($cities as $city)
+                <option value="/cities/{{ $city->id }}/categories"> {{$city->name}}</option>
+                @endforeach
+        </select>
 
 
-  @guest 
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            
-            @endif
-            @else 
-            <a href="{{ route('logout') }}">Log out</a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-            </form>
-            @endguest
 
-@endsection
-
+-->
 

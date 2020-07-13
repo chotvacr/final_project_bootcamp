@@ -8,11 +8,12 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    // One-To-Many Relationship (One User can create multiple Activites)
     public function activities()
     {
         return $this->hasMany('App\Activity');
     }
-
+    // Many-To-Many (One User can register for multiple Activites)
     public function registered()
     {
         return $this->belongsToMany('App\Activity', 'activity_user');

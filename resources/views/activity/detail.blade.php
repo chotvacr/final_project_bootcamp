@@ -1,57 +1,57 @@
 <!--Shows the details of one specific Activity-->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/activity.detail.css') }}" >
 
 @extends('layouts.layout')
 
 @section('content')
 
-<!--Example Pictures of that specific Activity-->
-    <div class="activity--pictures__header">
-        <img src="{{ asset('img/prague.jpg') }}" style="height: 100px">    
-        <img src="{{ asset('img/prague.jpg') }}" style="height: 100px"> 
-        <img src="{{ asset('img/prague.jpg') }}" style="height: 100px"> 
+<div class="detail--container">
+    <!--Example Pictures of that specific Activity-->
+    <div class="detail--pictures">
+        <img class="detail--picture" src="{{ asset('img/prague.jpg') }}" style="height: 100px">    
+        <img class="detail--picture" src="{{ asset('img/prague.jpg') }}" style="height: 100px"> 
+        <img class="detail--picture" src="{{ asset('img/prague.jpg') }}" style="height: 100px"> 
     </div> 
 
-    <div class="activity--headline">
-        <h1>{{ $activity->name }}</h1>
+    <div class="detail--headline">
+        <h1 class="headline--name">{{ $activity->name }}</h1>
+        <p class="headline--description">{{ $activity->description }}</p>
+        <br>
+    </div>
+
+    <div class="detail--facts">
+        <p class="detail--fact">Available Places: {{$activity->group_size}}</p>
+        <p class="detail--fact">Starts: {{$activity->date_time}}</p>
+        <p class="detail--fact">Address: {{$activity->adress}}</p>
+        <p class="detail--fact">Postcode: {{$activity->postcode}}</p>
+        <p class="detail--fact">Price: {{$activity->price}}</p>
+    </div>
+
+
+    <div class="detail--registration">
+    <!--When being logged-in you can see a Register button that will register you to this activity-->
         @auth
-        <button>show my list of activities</button>
+        <form method="POST" action="{{ action('ActivityController@registerActivity') }}">
+        @csrf
+           
+            <input type="hidden" value="{{Auth::user()->id}}" name="user_id">
+            <input type="hidden" value="{{$activity->id}}" name="activity_id">
+        
+        <button class="registration--button" type="submit">Register for this activity</button>
+        </form>
         @endauth
     </div>
+    <br>
 
-    <div class="activity--facts">
-        <p>Group size: {{$activity->group_size}}</p>
-        <p>Starts: {{$activity->date_time}}</p>
-        <p>Where: {{$activity->adress}}</p>
-        <p>Postcode: {{$activity->postcode}}</p>
-        <p>Starts: {{$activity->date_time}}</p>
-        <p>Rate per activity: {{$activity->price}}</p>
-    </div>
-
-    <div class="activity--description">
-        <h2>Course Description</h2>
-        <p>{{ $activity->description }}</p>
-    </div>
-
-<!--When being logged-in you can see a Register button that will register you to this activity-->
-    @auth
-    <form method="POST" action="{{ action('ActivityController@registerActivity') }}">
-    @csrf
-       
-        <input type="hidden" value="{{Auth::user()->id}}" name="user_id">
-        <input type="hidden" value="{{$activity->id}}" name="activity_id">
-    
-    <button type="submit">Register for this activity</button>
-    </form>
-    @endauth
-
-<!--when visiting as a guest, you see a button to login / register on the website-->
     @guest
-    <form method="get" action="/login">
-    <button type="submit">Log in to register for this activity</button>
-    </form>
+    <div class="detail--login">
+        <a class="login--link" href="/login">Login to take part</a>  
+    </div>
+    <br>    
     @endguest
-
-    <div class="activity--about">
+    
+    
+    <div class="detail--about">
         @if ($owner !== null) 
         <h2>About me</h2>
         <img src="" alt="">
@@ -59,12 +59,13 @@
         <p>{{ $owner->description }}</p>
         <p>Contact: {{ $activity->email }}</p>
         @endif
-    </div class="activity--related">
+    </div> 
+
+    <div class="detail--related">
         <h2>More Activities by that teacher</h2>
-    <div>
-
+        <p>{{ $owner->activity_name }}</p>
     </div>
-
+</div>
     
 @endsection
 

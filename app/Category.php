@@ -11,7 +11,8 @@ class Category extends Model
         return $this->belongstoMany('App\City');
 }
 
-public function activity()
+// One-To-Many Relationship
+public function activities()
     {
         return $this->hasMany('App\Activity');
     }

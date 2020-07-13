@@ -1,0 +1,32 @@
+body {
+    margin: 0; 
+    background-repeat: no-repeat;
+    background-size: cover; background-position: center;
+}
+
+.container--links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav--link {
+    text-decoration: none;
+    margin: 10px; 
+    padding: 10px; 
+    background-color: #e3f0f0;
+}
+
+.nav--link:hover {
+    background-color: #528884; 
+}
+
+input[type=text] {
+    border: 2px solid #e3f0f0;
+    border-radius: 4px;
+  }
+
+input[type=text]:focus {
+    background-color: #a5ac4f; 
+  }
