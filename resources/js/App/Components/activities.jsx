@@ -18,10 +18,11 @@ export default class ActivityList extends React.Component {
         const url = window.location.pathname.split('/');
         
         const city_id = url[2];
-        const activity_id = url[3];
-        console.log(city_id, activity_id);
+        const category_id = url[3];
+        // const activity_id = url[3];
+        console.log(city_id, category_id);
 
-        fetch(`/api/activity?city_id=${city_id}&activity_id=${activity_id}&max_price=${this.state.maxPrice}`, {
+        fetch(`/api/activity?city_id=${city_id}&category_id=${category_id}`, {
             headers: {
                 'Accept':       'application/json', // we expect JSON as response
                 'Content-Type': 'application/json', // if we are sending something in the body, it is JSON

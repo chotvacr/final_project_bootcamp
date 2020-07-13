@@ -13,13 +13,16 @@ class ActivityController extends Controller
     {
 
         $city_id = $request->input('city_id');
-        $activity_id = $request->input('activity_id');
+        // $activity_id = $request->input('activity_id');
+        $category_id = $request->input('category_id');
 
-        $activity = Activity::orderBy('name')
-            ->limit(5)
-            ->get();
+        $activity = Activity::limit(5)
+        ->orderBy('name')
+        ->where('city_id', $city_id )
+        ->where('category_id', $category_id )
+        ->get();
       
-    return $activity;
+    return($activity);
  }
 
        

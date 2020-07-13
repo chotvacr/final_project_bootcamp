@@ -28717,9 +28717,10 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
     _defineProperty(_assertThisInitialized(_this), "componentDidMount", function () {
       var url = window.location.pathname.split('/');
       var city_id = url[2];
-      var activity_id = url[3];
-      console.log(city_id, activity_id);
-      fetch("/api/activity?city_id=".concat(city_id, "&activity_id=").concat(activity_id, "&max_price=").concat(_this.state.maxPrice), {
+      var category_id = url[3]; // const activity_id = url[3];
+
+      console.log(city_id, category_id);
+      fetch("/api/activity?city_id=".concat(city_id, "&category_id=").concat(category_id), {
         headers: {
           'Accept': 'application/json',
           // we expect JSON as response
