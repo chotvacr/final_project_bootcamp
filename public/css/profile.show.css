@@ -1,0 +1,11 @@
+body {
+    background-color:  #f4f3f1;
+    color: #45565d; 
+    background-image: url(/img/taneli-lahtinen-e57Hpo-Qek4-unsplash.jpg);
+    background-attachment: fixed;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.activities {
+    display: flex;
+}

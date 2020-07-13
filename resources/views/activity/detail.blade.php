@@ -58,9 +58,9 @@
     
     <div class="detail--about">
         @if ($owner !== null) 
-        <h2>About me</h2>
+        <h2>About activity creator</h2>
         <img src="" alt="">
-
+        <p>{{ $owner->name }}</p>
         <p>{{ $owner->description }}</p>
         <p>Contact: {{ $activity->email }}</p>
         @endif

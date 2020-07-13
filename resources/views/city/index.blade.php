@@ -10,9 +10,9 @@
         <h2 class="home--secondHeadline">Meet your Neighborhood and start exploring!</h2>
 
         <div class="home--nav">
-            <h3>Cities: </h3>
+            <h3>We are present in cities </h3>
             @foreach ($cities as $city)
-                <a href="/cities/{{ $city->id }}/categories"">{{$city->name}}</a>
+            <a href="/cities/{{ $city->id }}/categories">{{$city->name}}</a>
             @endforeach
         </div>
 

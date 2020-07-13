@@ -15,6 +15,7 @@ class ActivityController extends Controller
         $city_id = $request->input('city_id');
         // $activity_id = $request->input('activity_id');
         $category_id = $request->input('category_id');
+        
 
         $activity = Activity::limit(5)
         ->orderBy('name')
