@@ -7,13 +7,21 @@ export default class ActivityList extends React.Component {
 
         this.state = {
             data: null,
+            maxPrice: null,
             
         }
 
     }
 
     componentDidMount = () => {
-        fetch('/api/activity', {
+
+        const url = window.location.pathname.split('/');
+        
+        const city_id = url[2];
+        const activity_id = url[3];
+        console.log(city_id, activity_id);
+
+        fetch(`/api/activity?city_id=${city_id}&activity_id=${activity_id}&max_price=${this.state.maxPrice}`, {
             headers: {
                 'Accept':       'application/json', // we expect JSON as response
                 'Content-Type': 'application/json', // if we are sending something in the body, it is JSON
@@ -76,19 +84,22 @@ export default class ActivityList extends React.Component {
         return (
             <div className="activity-list">
                 {
-                     <ul>
+                     <div>
                                 {
                                     this.state.data.map(activity => (
             
-                                        <li className="activity" key={ activity.id }>
+                                        <div className="activity" key={ activity.id }>
                                             <div className="activity__data">
                                                 <div className="activity__name">{ activity.name }</div>
-                                                <div className="pactivity__description">{ activity.description }</div>
+                                                <div className="activity__description">{ activity.description }</div>
+                                                <div className="activity__datetime">{ activity.date_time }</div>
+                                                <div className="activity__address">{ activity.address }</div>
+                                                <a href={`/cities/${activity.city_id}/${activity.category_id}/${activity.id}`}>Detail</a>
                                             </div>
-                                        </li>
+                                        </div>
                                     ))
                                 }
-                            </ul>
+                        </div>   
                 }
                     
                

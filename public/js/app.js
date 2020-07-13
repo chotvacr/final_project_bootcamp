@@ -28653,7 +28653,7 @@ var App = /*#__PURE__*/function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "App component"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_activities__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "List of Activities"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_activities__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
 
@@ -28715,7 +28715,11 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "componentDidMount", function () {
-      fetch('/api/activity', {
+      var url = window.location.pathname.split('/');
+      var city_id = url[2];
+      var activity_id = url[3];
+      console.log(city_id, activity_id);
+      fetch("/api/activity?city_id=".concat(city_id, "&activity_id=").concat(activity_id, "&max_price=").concat(_this.state.maxPrice), {
         headers: {
           'Accept': 'application/json',
           // we expect JSON as response
@@ -28744,7 +28748,8 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
     });
 
     _this.state = {
-      data: null
+      data: null,
+      maxPrice: null
     };
     return _this;
   }
@@ -28775,8 +28780,8 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "activity-list"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.state.data.map(function (activity) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.data.map(function (activity) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity",
           key: activity.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -28784,8 +28789,14 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity__name"
         }, activity.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "pactivity__description"
-        }, activity.description)));
+          className: "activity__description"
+        }, activity.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "activity__datetime"
+        }, activity.date_time), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "activity__address"
+        }, activity.address), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "/cities/".concat(activity.city_id, "/").concat(activity.category_id, "/").concat(activity.id)
+        }, "Detail")));
       })));
     }
   }]);

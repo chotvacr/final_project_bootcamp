@@ -89,11 +89,11 @@ Route::get('/cities/{city_id}/categories', 'CityController@show')->name('city.sh
 
 // 3. Overview Activities: 
         // show all available Activities in certain Category
-Route::get('/cities/{city_id}/{category_id}/activities', 'ActivityController@show')->name('activity.show'); 
+// Route::get('/cities/{city_id}/{category_id}/activities', 'ActivityController@show')->name('activity.show'); 
 
 // 4. Specific Activity: 
         // Show the Detail of the Activity: 
-Route::get('/cities/{city_id}/{category_id}/{activity_id}', 'ActivityController@detail')->name('activity.detail'); 
+
         // Register a logged-in user to that activity: 
 Route::post('/store', 'ActivityController@registerActivity')->name('activity.registerActivity'); 
 
@@ -122,5 +122,6 @@ Route::post('/search', 'ActivityController@search')->name('activity.search');
 // Route::view('/api/activity','welcome');
 
 Route::view('/activityreactlist', 'welcome');
+Route::get('/cities/{city_id}/{category_id}/activities', 'ActivityController@show')->name('activity.show'); 
 
-
+Route::get('/cities/{city_id}/{category_id}/{activity_id}', 'ActivityController@detail')->name('activity.detail'); 
