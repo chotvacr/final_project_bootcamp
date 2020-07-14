@@ -29,6 +29,7 @@ mix.react('resources/js/app.js', 'public/js')
     .sass('resources/sass/profileedit.scss', 'public/css/profileedit.css')
     .sass('resources/sass/header.scss', 'public/css/header.css')
     .sass('resources/sass/footer.scss', 'public/css/footer.css')
+    .sass('resources/sass/activities.scss', 'public/css/activities.css')
  
     .browserSync({
         host: 'localhost',

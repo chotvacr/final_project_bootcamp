@@ -1,0 +1,31 @@
+@import 'variables'; 
+
+body {
+    background-color: #f4f3f1;
+    font-family: $font-family;
+}
+
+.activity-list-detail {
+    border: red 2px solid;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vw; 
+    margin-right: 10vw;
+    
+}
+
+.activity {
+    border: blue 2px solid; 
+    margin-bottom: 5vh;
+}
+
+.activity__btn {
+    margin-top: 10px;
+    text-decoration: none;
+        margin: 10px; 
+        padding: 10px; 
+        background-color: #e3f0f0;
+    &:hover {
+        background-color: #528884; 
+    }
+}

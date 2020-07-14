@@ -28758,35 +28758,16 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
   _createClass(ActivityList, [{
     key: "render",
     value: function render() {
-      /*
-      content = (
-              <ul>
-                  {
-                      this.state.data.map(activity => (
-                            <li className="activity" key={ activity.id }>
-                              <div className="activity__data">
-                                  <div className="activity__name">{ activity.name }</div>
-                                  <div className="pactivity__description">{ activity.description }</div>
-                              </div>
-                          </li>
-                      ))
-                  }
-              </ul>
-          )
-      */
-      // return the HTML code for this component with the content inside
       if (this.state.data === null) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Loading...");
       }
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "activity-list"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.data.map(function (activity) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "activity-list-detail"
+      }, this.state.data.map(function (activity) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity",
           key: activity.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "activity__data"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity__name"
         }, activity.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -28796,9 +28777,18 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
         }, activity.date_time), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity__address"
         }, activity.address), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          className: "activity__btn",
           href: "/cities/".concat(activity.city_id, "/").concat(activity.category_id, "/").concat(activity.id)
-        }, "Detail")));
-      })));
+        }, "Detail"));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163931.25644248963!2d14.32553874982573!3d50.05958535668972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b939c0970798b%3A0x400af0f66164090!2sPraha!5e0!3m2!1scs!2scz!4v1594736640583!5m2!1scs!2scz",
+        width: "600",
+        height: "450",
+        frameBorder: "0",
+        allowFullScreen: "",
+        "aria-hidden": "false",
+        tabIndex: "0"
+      }));
     }
   }]);
 
@@ -28830,6 +28820,17 @@ __webpack_require__.r(__webpack_exports__);
 if (document.getElementById('react')) {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App_Components_App_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('react'));
 }
+
+/***/ }),
+
+/***/ "./resources/sass/activities.scss":
+/*!****************************************!*\
+  !*** ./resources/sass/activities.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -28900,6 +28901,7 @@ if (document.getElementById('react')) {
 /***/ }),
 
 /***/ 0:
+<<<<<<< HEAD
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ./resources/sass/profilepage.scss ./resources/sass/profileedit.scss ./resources/sass/header.scss ./resources/sass/footer.scss ***!
   \**************************************************************************************************************************************************************************************************************************/
@@ -28913,6 +28915,22 @@ __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_pr
 __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\profileedit.scss */"./resources/sass/profileedit.scss");
 __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\header.scss */"./resources/sass/header.scss");
 module.exports = __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\footer.scss */"./resources/sass/footer.scss");
+=======
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ./resources/sass/profilepage.scss ./resources/sass/profileedit.scss ./resources/sass/header.scss ./resources/sass/footer.scss ./resources/sass/activities.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\homepage.scss */"./resources/sass/homepage.scss");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\profilepage.scss */"./resources/sass/profilepage.scss");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\profileedit.scss */"./resources/sass/profileedit.scss");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\header.scss */"./resources/sass/header.scss");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\footer.scss */"./resources/sass/footer.scss");
+module.exports = __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\activities.scss */"./resources/sass/activities.scss");
+>>>>>>> 19b6b76ad4d49f4371b8d815aa0590673dbbfcdb
 
 
 /***/ })
