@@ -108,11 +108,16 @@ class ActivityController extends Controller
         if ($user->registered()->where('activity_id', $activity_id)->exists())
         {
            return redirect()->back()->with('alert', 'Sorry, you are registered!');
-        } 
-        $user->registered()->attach($activity_id);
-        $activity->decrement('group_size'); 
-        DB::table('activities')->update(["group_size"=>DB::raw("greatest(group_size - 1, 0)")]);
-
+        }
+        elseif ($user->registered()->where('activity_id', $activity_id)->doesntExist())
+        {
+           
+            $user->registered()->attach($activity_id);
+            $activity->decrement('group_size'); 
+            DB::table('activities')->update(["group_size"=>DB::raw("greatest(group_size - 1, 0)")]);
+            return redirect()->back()->with('alert', 'registered!');
+        }
+        
         return redirect(action('ActivityController@detail', [$activity->city_id,$activity->category_id,$activity->id ]));
     }
 // Owner of Activity deletes a complete Activity  

@@ -37,7 +37,7 @@
             <input type="hidden" value="{{Auth::user()->id}}" name="user_id">
             <input type="hidden" value="{{$activity->id}}" name="activity_id">
         
-        <button class="registration--button" type="submit">Register for this activity</button>
+        <button class="registration--button" type="submit" >Register for this activity</button>
         @if (session('alert'))
             <div class="alert alert-success">
                 {{ session('alert') }}
