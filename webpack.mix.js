@@ -25,6 +25,8 @@ if (!mix.inProduction()) {
 mix.react('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/homepage.scss', 'public/css/homepage.css')
+    .sass('resources/sass/profilepage.scss', 'public/css/profilepage.css')
+    .sass('resources/sass/profileedit.scss', 'public/css/profileedit.css')
  
     .browserSync({
         host: 'localhost',

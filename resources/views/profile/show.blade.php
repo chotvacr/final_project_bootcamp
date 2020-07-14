@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="{{ asset('css/profile.show.css') }}" >
+<link rel="stylesheet" type="text/css" href="{{ asset('css/profilepage.css') }}" >
 
 
 @extends('layouts.app')
@@ -7,44 +7,54 @@
  @section('content')
 
     @auth
-        <h1>Welcome {{Auth::user()->name}}</h1>
+        <div class="personalinfo">
+            <h1 class="personalinfo__welcome">Welcome {{Auth::user()->name}} </h1>
 
-        <div>
-            <h1>Personal Details: </h1>
-            
-            <h2>{{Auth::user()->description}}</h2>
-            <a href="{{ route('profile.edit', [$user->id]) }}">Edit this User</a>
+            <div>
+                <h2>Personal Details: </h2>
+                
+                <p>{{Auth::user()->description}}</p>
+                
+                <form action="{{ route('profile.edit', [$user->id]) }}">
+                <button type="submit">Edit information about you</button> 
+                </form>
+                <!-- <a href="{{ route('profile.edit', [$user->id]) }}">Edit information about you</a> -->
+            </div>
         </div>
-        
 
         <div class="activities">
-            <div>
-                <h1>My created activities </h1>
+            <div class="activities__createdactivities">
+                <h2>My activities </h2>
                 @foreach ($activities as $activity)
-                    <div class="activity">
+                    <div class="activities__activity">
                         <h3>{{ $activity->name }}</h3>
-                        <p>{{ $activity->description }}</p>
+                        <p>{{$activity->date_time}}</p>
+                        <p>{{$activity->address}}</p>
+                        <!-- <p>{{ $activity->description }}</p> -->
                     </div>
-                    <form action="{{ action('ActivityController@removeActivity', 'Auth::user()->id', 'Auth::activity()->id' ) }}" method="post">
-                        @csrf
-                        <input type="hidden" name="activity_id" value="{{ $activity->id }}">
-                        <button type="submit">Remove Activity</button>
-                        
-                    
-                    </form>
-                    <a href="{{ route('activity.edit', [$activity->id]) }}">Edit this activity</a>
-                    <!-- <form action="{{ action('ActivityController@edit', 'Auth::()->id', 'Auth::activity()->id' ) }}" method="get">
-                        @csrf
-                        <input type="hidden" name="activity_id" value="{{ $activity->id }}">
-                        <button type="submit">Edit Activity</button> -->
-                    <!-- </form> -->
+                    <div class="activities__buttons">
+                        <form action="{{ action('ActivityController@removeActivity', 'Auth::user()->id', 'Auth::activity()->id' ) }}" method="post">
+                            @csrf
+                            <input type="hidden" name="activity_id" value="{{ $activity->id }}">
+                            <button type="submit">Remove Activity</button>
+                        </form>
+                        <form action="{{ route('activity.edit', [$activity->id]) }}">
+                            <button type="submit">Edit this activity</button>
+                        </form>
+                    </div>
+                   
                 @endforeach
             </div>
 
-            <div>
-                <h1>My registered activities </h1>
+            <div class="activities__registeredactivities">
+                    <h2>My registered activities </h2>
                 @foreach ($registered as $activity)
-                    <h1>{{ $activity->name }}</h1>
+                    <div class="activities__activity">
+                        <h3>{{ $activity->name }}</h3>
+                        <p>{{$activity->date_time}}</p>
+                        <p>{{$activity->address}}</p>
+                    </div>
+
                     <form action="{{ action('ActivityController@removeRegistration', 'Auth::user()->id', 'Auth::activity()->id' ) }}" method="post">
                         @csrf
                         <input type="hidden" name="activity_id" value="{{ $activity->id }}">

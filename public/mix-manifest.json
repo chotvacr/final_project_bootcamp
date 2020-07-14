@@ -1,8 +1,12 @@
 {
-    "/js/app.js": "/js/app.js?id=da5932534c88d87699ee",
+    "/js/app.js": "/js/app.js?id=d78a33b0624d683aba81",
     "/css/app.css": "/css/app.css?id=471a93a92818d197ec2a",
-    "/js/app.js.map": "/js/app.js.map?id=f7236c276034075fcd38",
-    "/css/app.css.map": "/css/app.css.map?id=69a22d9f1694bcd46206",
     "/css/homepage.css": "/css/homepage.css?id=b6815af7b624875e50c5",
-    "/css/homepage.css.map": "/css/homepage.css.map?id=b4487d1a5add440b1ce5"
+    "/css/profilepage.css": "/css/profilepage.css?id=cdbbffc33ca95e53613f",
+    "/css/profileedit.css": "/css/profileedit.css?id=d5035c73dfca3d1801d0",
+    "/js/app.js.map": "/js/app.js.map?id=5bff8659c27eaef805f0",
+    "/css/app.css.map": "/css/app.css.map?id=e06ea835202e6393a324",
+    "/css/homepage.css.map": "/css/homepage.css.map?id=67d0ce4bf69dc3ebdac1",
+    "/css/profilepage.css.map": "/css/profilepage.css.map?id=d3b3946167a6439b4f50",
+    "/css/profileedit.css.map": "/css/profileedit.css.map?id=d3e9f0fadcdc212dad23"
 }

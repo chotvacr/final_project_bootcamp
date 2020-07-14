@@ -1,12 +1,16 @@
+<link rel="stylesheet" type="text/css" href="{{ asset('css/profileedit.css') }}" >
+
 @extends('layouts.app')
 @extends('partials.header')
 
  @section('content')
 
     @auth
+    <div class="edit">
         <h1>Welcome {{Auth::user()->name}}</h1>
+        <p>Change your information here</p>
 
-        <form method="post" action="/profile/{{Auth::user()->id }}">
+        <form class="edit__form" method="post" action="/profile/{{Auth::user()->id }}">
             @csrf
         
             <div>
@@ -21,7 +25,7 @@
         
             <button type="submit">Save me!</button>
         </form>
-        
+    </div>    
     @endauth
 
 <!--
