@@ -68,7 +68,7 @@
 
     <div class="detail--related">
         <h2>More Activities by that teacher</h2>
-        <p>{{ $owner->activity_name }}</p>
+        <p>{{ $owner->activityname }}</p>
     </div>
 </div>
     

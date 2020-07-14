@@ -8,7 +8,7 @@
 
     @auth
         <div class="personalinfo">
-            <h1 class="personalinfo__welcome">Welcome {{Auth::user()->name}} </h1>
+            <h1 class="personalinfo__welcome">Welcome {{Auth::user()->name}}</h1>
 
             <div>
                 <h2>Personal Details: </h2>

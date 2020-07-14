@@ -1,16 +1,18 @@
 {
-    "/js/app.js": "/js/app.js?id=31a5420922d652343938",
-    "/css/app.css": "/css/app.css?id=471a93a92818d197ec2a",
+    "/js/app.js": "/js/app.js?id=99d1819c90479e18bb3a",
+    "/css/app.css": "/css/app.css?id=e45c9dae80131e915e5e",
     "/css/homepage.css": "/css/homepage.css?id=ed8e1522dba4dc0aa145",
     "/css/profilepage.css": "/css/profilepage.css?id=cdbbffc33ca95e53613f",
     "/css/profileedit.css": "/css/profileedit.css?id=d5035c73dfca3d1801d0",
-    "/css/header.css": "/css/header.css?id=40ae02d37d1f543cb797",
+    "/css/header.css": "/css/header.css?id=5a9b1acd49d899539981",
     "/css/footer.css": "/css/footer.css?id=f26fdbcc2e2f9af7275d",
-    "/js/app.js.map": "/js/app.js.map?id=62d5405a5dacd73c7fc5",
-    "/css/app.css.map": "/css/app.css.map?id=e06ea835202e6393a324",
+    "/css/activities.css": "/css/activities.css?id=eb291b0c81984e31324e",
+    "/js/app.js.map": "/js/app.js.map?id=a74a1c22a39c472576bf",
+    "/css/app.css.map": "/css/app.css.map?id=e317a448876e0f19bbf2",
     "/css/homepage.css.map": "/css/homepage.css.map?id=e8d435b6506c11cd07f8",
     "/css/profilepage.css.map": "/css/profilepage.css.map?id=d3b3946167a6439b4f50",
     "/css/profileedit.css.map": "/css/profileedit.css.map?id=d3e9f0fadcdc212dad23",
-    "/css/header.css.map": "/css/header.css.map?id=2d3835c850878d11f340",
-    "/css/footer.css.map": "/css/footer.css.map?id=a3790479d1c960328dab"
+    "/css/header.css.map": "/css/header.css.map?id=8c7183b5c090076a697e",
+    "/css/footer.css.map": "/css/footer.css.map?id=a3790479d1c960328dab",
+    "/css/activities.css.map": "/css/activities.css.map?id=ae238ee4d71594d4bb22"
 }

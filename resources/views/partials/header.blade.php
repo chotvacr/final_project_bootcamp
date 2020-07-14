@@ -30,8 +30,22 @@
         @endguest
 
         @if (Route::current()->getName() == 'city.index')
-                <img class="header--image" src="{{ asset('img/logo.png') }}" alt="blabla">
-            @endif
+                <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">
+        @elseif (Route::current()->getName() == 'city.show')
+        <a href="/">  <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+        @elseif (Route::current()->getName() == 'profile.show')
+        <a href="/"> <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+        @elseif (Route::current()->getName() == 'activity.create')
+        <a href="/">  <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+        @elseif (Route::current()->getName() == 'activity.edit')
+        <a href="/">     <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+        @elseif (Route::current()->getName() == 'profile.edit')
+        <a href="/">       <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+        @elseif (Route::current()->getName() == 'activity.show')
+        <a href="/">        <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
+        @elseif (Route::current()->getName() == 'activity.detail')
+        <a href="/">        <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
+        @endif
 
         @if(Route::current()->getName() == 'activity.show')
             <!--Search-bar in Activity Overview Page-->
@@ -51,37 +65,38 @@
         @endif
 
         @auth
-        <ul class=header--nav">
+        <ul class="header--nav">
                 <a class="nav--link" href="/logout">Logout</a>
-                <a class="nav--link" href="/profile/{{ Auth::user()->id }}">Profile Page</a>
+                <a class="nav--link" href="/profile/{{ Auth::user()->id }}">My Profile</a>
                 <a class="nav--link" href="/activities/create">Create Activity</a>
             
             
 
             @if (Route::current()->getName() == 'city.show')
                 
-                <a class="nav--link" href="/">Home</a> 
+                
                 
             @elseif(Route::current()->getName() == 'activity.show')
                 
-                    <a class="nav--link" href="/">Home</a>
+                    
                     <a class="nav--link" href="/cities/{{ $city->id }}/categories">Categories</a>
                 
                 
             @elseif(Route::current()->getName() == 'activity.detail')
                 
-                    <a class="nav--link" href="/">Home</a>
+                   
                     <a class="nav--link" href="/cities/{{ $city->id }}/categories">Categories</a>
-                    <a class="nav--link" href="/profile/{{ $user->id }}">Personal Page</a>
+                     
                 
             @elseif(Route::current()->getName() == 'activity.create')
                 
-                    <a class="nav--link" href="/">Home</a>
+                    
                     <a class="nav--link" href="/cities/{{ $city->id }}/categories">Categories</a>
                 
             @elseif(Route::current()->getName() == 'profile.show')
                 
-                    <a class="nav--link" href="/">Home</a>
+                    
+                    
                 
             @endif
         </ul>

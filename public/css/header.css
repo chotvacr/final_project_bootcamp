@@ -30,4 +30,9 @@
 .nav--link:hover {
   background-color: #528884;
 }
+
+.header--nav {
+  display: flex;
+  flex-direction: row-reverse;
+}
 /*# sourceMappingURL=header.css.map*/
