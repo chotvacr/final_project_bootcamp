@@ -4,17 +4,21 @@
 @extends('layouts.layout')
 @section('content')
 
-    <div class="homepage--container">
+    <div class="homepage">
         
-        <h1 class="home--headline">Ready for an adventure?</h1>
-        <h2 class="home--secondHeadline">Meet your Neighborhood and start exploring!</h2>
+        <h1 class="homepage__headline">Ready for an adventure?</h1>
+        <h2 class="homepage__secondHeadline">Meet your Neighborhood and start exploring!</h2>
 
-        <div class="home--nav">
-            <h3>We are present in cities </h3>
+        
+        <h3 class="homepage__text">We are present in hte following cities: </h3>
+
+        <div class="homepage__links">
             @foreach ($cities as $city)
-            <a href="/cities/{{ $city->id }}/categories">{{$city->name}}</a>
+            <a class="homepage__link" href="/cities/{{ $city->id }}/categories">{{$city->name}}</a>
             @endforeach
         </div>
+            
+        
 
         
         
