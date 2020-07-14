@@ -29,12 +29,15 @@
                         @csrf
                         <input type="hidden" name="activity_id" value="{{ $activity->id }}">
                         <button type="submit">Remove Activity</button>
+                        
+                    
                     </form>
-                    <form action="{{ action('ActivityController@edit', 'Auth::()->id', 'Auth::activity()->id' ) }}" method="get">
+                    <a href="{{ route('activity.edit', [$activity->id]) }}">Edit this activity</a>
+                    <!-- <form action="{{ action('ActivityController@edit', 'Auth::()->id', 'Auth::activity()->id' ) }}" method="get">
                         @csrf
                         <input type="hidden" name="activity_id" value="{{ $activity->id }}">
-                        <button type="submit">Edit Activity</button>
-                    </form>
+                        <button type="submit">Edit Activity</button> -->
+                    <!-- </form> -->
                 @endforeach
             </div>
 

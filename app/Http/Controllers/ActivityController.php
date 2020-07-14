@@ -161,8 +161,10 @@ public function removeActivity(Request $request){
 
     public function edit($activity_id)
     {   $user = auth()->user(); 
-
+        
+        
         $activity = Activity::findOrFail($activity_id);
+
 
         return view('activity.edit', compact('user', 'activity'));
     }
@@ -173,8 +175,8 @@ public function removeActivity(Request $request){
         $activity = Activity::findOrFail($activity_id);
 
         $activity->user_id= $request->input('user_id');
-        $activity->city_id = $request->input('city_id');
-        $activity->category_id = $request->input('category_id');
+        // $activity->city_id = $request->input('city_id');
+        // $activity->category_id = $request->input('category_id');
         $activity->name = $request->input('name');
         $activity->description = $request->input('description');
         $activity->group_size = $request->input('group_size');
@@ -185,7 +187,7 @@ public function removeActivity(Request $request){
         $activity->email = $request->input('email');
         $activity->save();
 
-        return redirect('/');
+        return redirect('/profile/' . $user->id);
     }
 
 

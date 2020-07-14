@@ -108,8 +108,8 @@ Route::post('/activities', 'ActivityController@store')->name('activity.store');
 Route::post('/profile/removeActivity/',       'ActivityController@removeActivity')->name('activity.removeActivity');
 Route::post('/profile/removeregistration/',       'ActivityController@removeRegistration')->name('activity.removeRegistration');
 
-Route::get('/profile/activities/{activity_id}/edit/',       'ActivityController@edit')->name('activity.edit');
-Route::post('/profile/activities/{activity_id}/',       'ActivityController@update')->name('activity.update');
+Route::get('/profile/activities/{activity_id}/edit',       'ActivityController@edit')->name('activity.edit');
+Route::post('/profile/activities/{activity_id}',       'ActivityController@update')->name('activity.update');
 
 Route::get('/profile/{user_id}', 'ProfileController@show')->name('profile.show');
 Route::get( '/profile/{user_id}/edit', 'ProfileController@edit')   ->name('profile.edit');
