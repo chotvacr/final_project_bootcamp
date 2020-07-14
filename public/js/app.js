@@ -28900,10 +28900,9 @@ if (document.getElementById('react')) {
 /***/ }),
 
 /***/ 0:
-<<<<<<< HEAD
-/*!****************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ./resources/sass/profilepage.scss ./resources/sass/profileedit.scss ***!
-  \****************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ./resources/sass/profilepage.scss ./resources/sass/profileedit.scss ./resources/sass/header.scss ./resources/sass/footer.scss ***!
+  \**************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -28911,20 +28910,9 @@ __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_pr
 __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\homepage.scss */"./resources/sass/homepage.scss");
 __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\profilepage.scss */"./resources/sass/profilepage.scss");
-module.exports = __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\profileedit.scss */"./resources/sass/profileedit.scss");
-=======
-/*!******************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ./resources/sass/header.scss ./resources/sass/footer.scss ***!
-  \******************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\homepage.scss */"./resources/sass/homepage.scss");
-__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\header.scss */"./resources/sass/header.scss");
-module.exports = __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\footer.scss */"./resources/sass/footer.scss");
->>>>>>> 3a873adc3fdc4ceb634352cfdd7f4eee4dbcf04b
+__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\profileedit.scss */"./resources/sass/profileedit.scss");
+__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\header.scss */"./resources/sass/header.scss");
+module.exports = __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\footer.scss */"./resources/sass/footer.scss");
 
 
 /***/ })
