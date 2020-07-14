@@ -25,8 +25,13 @@ if (!mix.inProduction()) {
 mix.react('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/homepage.scss', 'public/css/homepage.css')
+<<<<<<< HEAD
     .sass('resources/sass/profilepage.scss', 'public/css/profilepage.css')
     .sass('resources/sass/profileedit.scss', 'public/css/profileedit.css')
+=======
+    .sass('resources/sass/header.scss', 'public/css/header.css')
+    .sass('resources/sass/footer.scss', 'public/css/footer.css')
+>>>>>>> 3a873adc3fdc4ceb634352cfdd7f4eee4dbcf04b
  
     .browserSync({
         host: 'localhost',
