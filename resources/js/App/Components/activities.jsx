@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default class ActivityList extends React.Component {
 
     constructor(props) {
@@ -7,10 +8,8 @@ export default class ActivityList extends React.Component {
 
         this.state = {
             data: null,
-            maxPrice: null,
-            
+            maxPrice: null,           
         }
-
     }
 
     componentDidMount = () => {
@@ -53,61 +52,34 @@ export default class ActivityList extends React.Component {
 
     render() {
 
-        /*
-       content = (
-                <ul>
-                    {
-                        this.state.data.map(activity => (
-
-                            <li className="activity" key={ activity.id }>
-                                <div className="activity__data">
-                                    <div className="activity__name">{ activity.name }</div>
-                                    <div className="pactivity__description">{ activity.description }</div>
-                                </div>
-                            </li>
-                        ))
-                    }
-                </ul>
-            )
-*/
-        // return the HTML code for this component with the content inside
-
         if(this.state.data === null){
             return (
                 <p>Loading...</p>
             )
         }
 
-
-        
-
-
         return (
-            <div className="activity-list">
+           <>
+            <div className="activity-list-detail">
                 {
-                     <div>
-                                {
-                                    this.state.data.map(activity => (
-            
-                                        <div className="activity" key={ activity.id }>
-                                            <div className="activity__data">
-                                                <div className="activity__name">{ activity.name }</div>
-                                                <div className="activity__description">{ activity.description }</div>
-                                                <div className="activity__datetime">{ activity.date_time }</div>
-                                                <div className="activity__address">{ activity.address }</div>
-                                                <a href={`/cities/${activity.city_id}/${activity.category_id}/${activity.id}`}>Detail</a>
-                                            </div>
-                                        </div>
-                                    ))
-                                }
-                        </div>   
+                    this.state.data.map(activity => (
+
+                        <div className="activity" key={ activity.id }>
+                            
+                            <div className="activity__name">{ activity.name }</div>
+                            <div className="activity__description">{ activity.description }</div>
+                            <div className="activity__datetime">{ activity.date_time }</div>
+                            <div className="activity__address">{ activity.address }</div>
+                            <a className="activity__btn" href={`/cities/${activity.city_id}/${activity.category_id}/${activity.id}`}>Detail</a>
+                            
+                        </div>
+                    ))
                 }
-                    
-               
-            </div>
-    )
-    
-}
+            </div>  
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163931.25644248963!2d14.32553874982573!3d50.05958535668972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b939c0970798b%3A0x400af0f66164090!2sPraha!5e0!3m2!1scs!2scz!4v1594736640583!5m2!1scs!2scz" width="600" height="450" frameBorder="0"  allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>   
+            </>                                
+        )
+    }
 }
     
 
