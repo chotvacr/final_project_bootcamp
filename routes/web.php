@@ -103,16 +103,14 @@ Route::get('/activities/create', 'ActivityController@create')->name('activity.cr
     // Store a new Activity: 
 Route::post('/activities', 'ActivityController@store')->name('activity.store'); 
 
-    // Edit one of your created Activites: 
-Route::get('/activities/{activity_id}/edit', 'ActivityController@edit')->name('activity.edit'); 
-    // Update your created Activity: 
-Route::get('/activities/{activity_id}', 'ActivityController@update')->name('activity.update'); 
-
-
+ 
 // Personal Profile Page: 
 Route::post('/profile/removeActivity/',       'ActivityController@removeActivity')->name('activity.removeActivity');
 Route::post('/profile/removeregistration/',       'ActivityController@removeRegistration')->name('activity.removeRegistration');
-Route::post('/profile/edit/',       'ActivityController@edit')->name('activity.edit');
+
+Route::get('/profile/activities/{activity_id}/edit/',       'ActivityController@edit')->name('activity.edit');
+Route::post('/profile/activities/{activity_id}/',       'ActivityController@update')->name('activity.update');
+
 Route::get('/profile/{user_id}', 'ProfileController@show')->name('profile.show');
 Route::get( '/profile/{user_id}/edit', 'ProfileController@edit')   ->name('profile.edit');
 Route::post( '/profile/{user_id}',      'ProfileController@update') ->name('profile.update');

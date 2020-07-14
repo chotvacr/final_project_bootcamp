@@ -161,25 +161,31 @@ public function removeActivity(Request $request){
 
     public function edit($activity_id)
     {   $user = auth()->user(); 
+
         $activity = Activity::findOrFail($activity_id);
 
-        return view('activity.edit', compact('user'));
+        return view('activity.edit', compact('user', 'activity'));
     }
 
     public function update($activity_id, Request $request){
         $user = auth()->user(); 
+
         $activity = Activity::findOrFail($activity_id);
 
+        $activity->user_id= $request->input('user_id');
+        $activity->city_id = $request->input('city_id');
+        $activity->category_id = $request->input('category_id');
         $activity->name = $request->input('name');
         $activity->description = $request->input('description');
-        $activity->postcode = $request->input('postcode');
-        $activity->category_id = $request->input('category_id');
         $activity->group_size = $request->input('group_size');
+        $activity->price = $request->input('price');
         $activity->date_time = $request->input('date_time');
-
+        $activity->address = $request->input('address');
+        $activity->postcode = $request->input('group_size');
+        $activity->email = $request->input('email');
         $activity->save();
 
-        return redirect('/profile/' . $user->id);
+        return redirect('/');
     }
 
 
