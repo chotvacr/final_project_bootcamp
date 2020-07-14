@@ -1,8 +1,12 @@
 {
-    "/js/app.js": "/js/app.js?id=da5932534c88d87699ee",
+    "/js/app.js": "/js/app.js?id=410af8473a5b582695ca",
     "/css/app.css": "/css/app.css?id=471a93a92818d197ec2a",
-    "/js/app.js.map": "/js/app.js.map?id=f7236c276034075fcd38",
+    "/css/homepage.css": "/css/homepage.css?id=ed8e1522dba4dc0aa145",
+    "/css/header.css": "/css/header.css?id=40ae02d37d1f543cb797",
+    "/css/footer.css": "/css/footer.css?id=f26fdbcc2e2f9af7275d",
+    "/js/app.js.map": "/js/app.js.map?id=a59b1030718bc62ff017",
     "/css/app.css.map": "/css/app.css.map?id=69a22d9f1694bcd46206",
-    "/css/homepage.css": "/css/homepage.css?id=b6815af7b624875e50c5",
-    "/css/homepage.css.map": "/css/homepage.css.map?id=b4487d1a5add440b1ce5"
+    "/css/homepage.css.map": "/css/homepage.css.map?id=53011c2af0c5e1affb09",
+    "/css/header.css.map": "/css/header.css.map?id=a11b8ed471900e51b2aa",
+    "/css/footer.css.map": "/css/footer.css.map?id=71c3a4e38cfc603466d9"
 }

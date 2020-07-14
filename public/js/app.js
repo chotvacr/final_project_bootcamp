@@ -28844,6 +28844,28 @@ if (document.getElementById('react')) {
 
 /***/ }),
 
+/***/ "./resources/sass/footer.scss":
+/*!************************************!*\
+  !*** ./resources/sass/footer.scss ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/header.scss":
+/*!************************************!*\
+  !*** ./resources/sass/header.scss ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/homepage.scss":
 /*!**************************************!*\
   !*** ./resources/sass/homepage.scss ***!
@@ -28856,15 +28878,17 @@ if (document.getElementById('react')) {
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ***!
-  \********************************************************************************************/
+/*!******************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ./resources/sass/header.scss ./resources/sass/footer.scss ***!
+  \******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\homepage.scss */"./resources/sass/homepage.scss");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\homepage.scss */"./resources/sass/homepage.scss");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\header.scss */"./resources/sass/header.scss");
+module.exports = __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\footer.scss */"./resources/sass/footer.scss");
 
 
 /***/ })
