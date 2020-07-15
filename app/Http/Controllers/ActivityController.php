@@ -19,12 +19,7 @@ class ActivityController extends Controller
     {
         $city = City::findOrFail($city_id); 
         $category = Category::findOrFail($category_id); 
-        /*
-        $activities = Activity::where([
-            ['city_id', $city_id], 
-            ['category_id', $category_id], 
-        ])->get();
-        */ 
+        
 
         return view('welcome', compact('city', 'category')); 
 
