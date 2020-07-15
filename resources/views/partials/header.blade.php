@@ -11,24 +11,8 @@
     
     <div class="header">
         <!--Links for Header depending on Authentication-->
-        @guest
-        <ul class="header--nav">
-                <a class="nav--link" href="/login">Login</a>   
-                <a class="nav--link" href="/register">Register</a>
-            @if (Route::current()->getName() == 'city.show')
-                <a class="nav--link" href="/">Home</a>
-            @elseif(Route::current()->getName() == 'activity.show')
-                    <a class="nav--link" href="/">Home</a>
-                    <a class="nav--link" href="/cities/{{ $city->id }}/categories">Categories</a>
-            @elseif(Route::current()->getName() == 'activity.detail')
-                
-                    <a class="nav--link" href="/">Home</a>
-                    <a class="nav--link" href="/cities/{{ $city->id }}/categories">Categories</a>
-                    <a class="nav--link" href="/cities/{{ $city->id }}/{{ $category->id }}/activities">Activities</a>
-            @endif
-        </ul>
-        @endguest
-
+        @guest 
+        
         @if (Route::current()->getName() == 'city.index')
                 <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">
         @elseif (Route::current()->getName() == 'city.show')
@@ -47,7 +31,7 @@
         <a href="/">        <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
         @endif
 
-        @if(Route::current()->getName() == 'activity.show')
+         @if(Route::current()->getName() == 'activity.show')
             <!--Search-bar in Activity Overview Page-->
             <div class="header--search">
                 <form method="POST" action="{{ action('ActivityController@search') }}">
@@ -62,9 +46,50 @@
                     </div>
                 </form>
             </div>
-        @endif
+            @endif
+        <ul class="header--nav">
+                <a class="nav--link" href="/login">Login</a>   
+                <a class="nav--link" href="/register">Register</a>
+            @if (Route::current()->getName() == 'city.show')
+                
+            @elseif(Route::current()->getName() == 'activity.show')
+                   
+                    <a class="nav--link" href="/cities/{{ $city->id }}/categories">Categories</a>
+            @elseif(Route::current()->getName() == 'activity.detail')
+                
+                    
+                    <a class="nav--link" href="/cities/{{ $city->id }}/categories">Categories</a>
+                    <a class="nav--link" href="/cities/{{ $city->id }}/{{ $category->id }}/activities">Activities</a>
+                    
+           
+            @endif 
+            
+           
+        </ul>
+        @endguest
+
+        
+
+       
 
         @auth
+        @if (Route::current()->getName() == 'city.index')
+                <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">
+        @elseif (Route::current()->getName() == 'city.show')
+        <a href="/">  <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+        @elseif (Route::current()->getName() == 'profile.show')
+        <a href="/"> <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+        @elseif (Route::current()->getName() == 'activity.create')
+        <a href="/">  <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+        @elseif (Route::current()->getName() == 'activity.edit')
+        <a href="/">     <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+        @elseif (Route::current()->getName() == 'profile.edit')
+        <a href="/">       <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+        @elseif (Route::current()->getName() == 'activity.show')
+        <a href="/">        <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
+        @elseif (Route::current()->getName() == 'activity.detail')
+        <a href="/">        <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
+        @endif
         <ul class="header--nav">
                 <a class="nav--link" href="/logout">Logout</a>
                 <a class="nav--link" href="/profile/{{ Auth::user()->id }}">My Profile</a>
