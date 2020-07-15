@@ -14,21 +14,25 @@
         @guest 
         
         @if (Route::current()->getName() == 'city.index')
-                <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">
+            <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"></a>
+        @elseif (Route::current()->getName() == 'login')
+            <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+        @elseif (Route::current()->getName() == 'register')
+            <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
         @elseif (Route::current()->getName() == 'city.show')
-        <a href="/">  <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+            <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
         @elseif (Route::current()->getName() == 'profile.show')
-        <a href="/"> <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+            <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
         @elseif (Route::current()->getName() == 'activity.create')
-        <a href="/">  <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+            <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
         @elseif (Route::current()->getName() == 'activity.edit')
-        <a href="/">     <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+            <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
         @elseif (Route::current()->getName() == 'profile.edit')
-        <a href="/">       <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+            <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
         @elseif (Route::current()->getName() == 'activity.show')
-        <a href="/">        <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
+            <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
         @elseif (Route::current()->getName() == 'activity.detail')
-        <a href="/">        <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
+            <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
         @endif
 
          @if(Route::current()->getName() == 'activity.show')
