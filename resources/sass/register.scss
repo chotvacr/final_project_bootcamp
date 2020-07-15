@@ -1,0 +1,17 @@
+@import 'variables'; 
+
+ .body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    font-family: $font-family; 
+    flex-wrap: wrap;
+    
+ }
+
+ .container {
+     border:2px blue solid;
+     
+ }
