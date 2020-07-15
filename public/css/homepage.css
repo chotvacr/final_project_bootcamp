@@ -8,13 +8,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: 80vh;
   font-family: "Courier New", Courier, monospace;
   flex-wrap: wrap;
 }
 .homepage__headline {
+  width: 80vw;
+  text-align: center;
   font-variant: small-caps;
   font-size: 55px;
+  color: #fcdde8;
+  font-weight: 900;
+  text-shadow: -0.0075em 0.0075em 0 #fef2f6, 0.005em 0.005em 0 #f6a5c1, 0.01em 0.01em 0 #f7aac4, 0.015em 0.015em #f7aec7, 0.02em 0.02em 0 #f8b3ca, 0.025em 0.025em 0 #f8b7cd, 0.03em 0.03em 0 #f8bcd0, 0.035em 0.035em 0 #f9c0d3;
 }
 @media screen and (max-width: 640px) {
   .homepage__headline {
@@ -23,11 +28,17 @@ body {
 }
 .homepage__secondHeadline {
   font-size: 30px;
+  width: 80vw;
+  text-align: center;
 }
 @media screen and (max-width: 640px) {
   .homepage__secondHeadline {
     font-size: 5vw;
   }
+}
+.homepage__text {
+  width: 80vw;
+  text-align: center;
 }
 .homepage__nav {
   display: flex;
@@ -41,5 +52,6 @@ body {
 }
 .homepage__link:hover {
   background-color: #528884;
+  color: pink;
 }
 /*# sourceMappingURL=homepage.css.map*/
