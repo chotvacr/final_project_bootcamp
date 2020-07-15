@@ -1,5 +1,5 @@
 <!--shows the Categories of one specific City-->
-<link rel="stylesheet" type="text/css" href="{{ asset('css/city.show.css') }}" >
+<link rel="stylesheet" type="text/css" href="{{ asset('css/categories.css') }}" >
 
 @extends('layouts.layout')
 @section('content')
@@ -10,16 +10,16 @@
     class="nuremberg"
     @endif>-->
 
-<div class="city--container">
+<div class="city">
 
-    <div class="head--one"><h1>Welcome to {{ $city->name}}</h1></div>
-    <div class="head--two"><h2>What would you like to do?</h2></div>
+    <div class="city--head"><h1>Welcome to {{ $city->name}}</h1></div>
+    <div class="city--subhead"><h2>What would you like to do?</h2></div>
 
-    <div class="category">
+    <div class="city--category">
         @foreach ($categories as $category)
-        <h2 class="category--item-name"> <a class="category--link" href="{{ route('activity.show', [$city->id, $category->id]) }}">{{ $category->name }}</a></h2>
+        <h2 class="city--category__name"> <a class="city--category__link" href="{{ route('activity.show', [$city->id, $category->id]) }}">{{ $category->name }}</a></h2>
             
-            <p class="category--item">{{ $category->description }}</p>
+            <p class="city--category__item">{{ $category->description }}</p>
         @endforeach
     </div>
   

@@ -30,6 +30,10 @@ mix.react('resources/js/app.js', 'public/js')
     .sass('resources/sass/header.scss', 'public/css/header.css')
     .sass('resources/sass/footer.scss', 'public/css/footer.css')
     .sass('resources/sass/activities.scss', 'public/css/activities.css')
+    .sass('resources/sass/register.scss', 'public/css/register.css')
+    .sass('resources/sass/login.scss', 'public/css/login.css')
+    .sass('resources/sass/categories.scss', 'public/css/categories.css')
+    .sass('resources/sass/detail.scss', 'public/css/detail.css')
  
     .browserSync({
         host: 'localhost',

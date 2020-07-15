@@ -1,6 +1,7 @@
 <!--Footer - Part
 -   doesn't have to be customized
 -->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/footer.css') }}" >
 
 <div class="footer">
     

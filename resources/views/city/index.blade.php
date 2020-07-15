@@ -10,7 +10,7 @@
         <h2 class="homepage__secondHeadline">Meet your Neighborhood and start exploring!</h2>
 
         
-        <h3 class="homepage__text">We are present in hte following cities: </h3>
+        <h3 class="homepage__text">We are present in the following cities: </h3>
 
         <div class="homepage__links">
             @foreach ($cities as $city)
