@@ -127,7 +127,7 @@ public function removeActivity(Request $request){
         $activity = Activity::findOrFail($activity_id);
         
         $activity->delete();
-        return redirect('/');
+        return redirect(action('ProfileController@show', $user->id));;
     }
 
 
