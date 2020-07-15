@@ -1,11 +1,12 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/profilepage.css') }}" >
 
 
-@extends('layouts.app')
-@extends('partials.header')
+@extends('layouts.layout')
+
+
 
  @section('content')
-
+    
     @auth
         <div class="personalinfo">
             <h1 class="personalinfo__welcome">Welcome {{Auth::user()->name}}</h1>

@@ -3,6 +3,7 @@ body {
   color: #45565d;
   background-image: url(/img/taneli-lahtinen-e57Hpo-Qek4-unsplash.jpg);
   background-attachment: fixed;
+  height: 80vh;
   font-family: "Courier New", Courier, monospace;
 }
 
