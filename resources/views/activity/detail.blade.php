@@ -1,20 +1,20 @@
 <!--Shows the details of one specific Activity-->
-<link rel="stylesheet" type="text/css" href="{{ asset('css/activity.detail.css') }}" >
+<link rel="stylesheet" type="text/css" href="{{ asset('css/detail.css') }}" >
 
 @extends('layouts.layout')
 
 @section('content')
 
-<div class="detail--container">
+<div class="detail">
     <!--Example Pictures of that specific Activity-->
     <div class="detail--pictures">
-        <img class="detail--picture" src="{{ asset('img/prague.jpg') }}" style="height: 100px">    
-        <img class="detail--picture" src="{{ asset('img/prague.jpg') }}" style="height: 100px"> 
-        <img class="detail--picture" src="{{ asset('img/prague.jpg') }}" style="height: 100px"> 
+        <img class="detail--pictures__item" src="{{ asset('img/prague.jpg') }}" style="height: 100px">    
+        <img class="detail--pictures__item" src="{{ asset('img/prague.jpg') }}" style="height: 100px"> 
+        <img class="detail--pictures__item" src="{{ asset('img/prague.jpg') }}" style="height: 100px"> 
     </div> 
 
     <div class="detail--headline">
-        <h1 class="headline--name">{{ $activity->name }}</h1>
+        <h1 class="detail--headline__name">{{ $activity->name }}</h1>
         <p class="headline--description">{{ $activity->description }}</p>
         <br>
     </div>
