@@ -28763,24 +28763,28 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
       }
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flexdisplay1"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flexdisplay"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "activity-list-detail"
       }, this.state.data.map(function (activity) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity",
           key: activity.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "/cities/".concat(activity.city_id, "/").concat(activity.category_id, "/").concat(activity.id)
+        }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity__name"
-        }, activity.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, activity.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity__description"
         }, activity.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity__datetime"
         }, activity.date_time), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity__address"
-        }, activity.address), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          className: "activity__btn",
-          href: "/cities/".concat(activity.city_id, "/").concat(activity.category_id, "/").concat(activity.id)
-        }, "Detail"));
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        }, activity.address));
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        className: "activity-list-detail__map",
         src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163931.25644248963!2d14.32553874982573!3d50.05958535668972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b939c0970798b%3A0x400af0f66164090!2sPraha!5e0!3m2!1scs!2scz!4v1594736640583!5m2!1scs!2scz",
         width: "600",
         height: "450",
@@ -28788,7 +28792,7 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
         allowFullScreen: "",
         "aria-hidden": "false",
         tabIndex: "0"
-      }));
+      }))));
     }
   }]);
 
@@ -28845,6 +28849,28 @@ if (document.getElementById('react')) {
 
 /***/ }),
 
+/***/ "./resources/sass/categories.scss":
+/*!****************************************!*\
+  !*** ./resources/sass/categories.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/detail.scss":
+/*!************************************!*\
+  !*** ./resources/sass/detail.scss ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/footer.scss":
 /*!************************************!*\
   !*** ./resources/sass/footer.scss ***!
@@ -28878,6 +28904,17 @@ if (document.getElementById('react')) {
 
 /***/ }),
 
+/***/ "./resources/sass/login.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/login.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/profileedit.scss":
 /*!*****************************************!*\
   !*** ./resources/sass/profileedit.scss ***!
@@ -28900,10 +28937,21 @@ if (document.getElementById('react')) {
 
 /***/ }),
 
+/***/ "./resources/sass/register.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/register.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!***********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ./resources/sass/profilepage.scss ./resources/sass/profileedit.scss ./resources/sass/header.scss ./resources/sass/footer.scss ./resources/sass/activities.scss ***!
-  \***********************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ./resources/sass/profilepage.scss ./resources/sass/profileedit.scss ./resources/sass/header.scss ./resources/sass/footer.scss ./resources/sass/activities.scss ./resources/sass/register.scss ./resources/sass/login.scss ./resources/sass/categories.scss ./resources/sass/detail.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -28914,7 +28962,11 @@ __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcam
 __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\profileedit.scss */"./resources/sass/profileedit.scss");
 __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\header.scss */"./resources/sass/header.scss");
 __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\footer.scss */"./resources/sass/footer.scss");
-module.exports = __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\activities.scss */"./resources/sass/activities.scss");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\activities.scss */"./resources/sass/activities.scss");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\register.scss */"./resources/sass/register.scss");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\login.scss */"./resources/sass/login.scss");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\categories.scss */"./resources/sass/categories.scss");
+module.exports = __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\detail.scss */"./resources/sass/detail.scss");
 
 
 /***/ })

@@ -17,6 +17,10 @@ body {
 .activity {
     border: blue 2px solid; 
     margin-bottom: 5vh;
+
+    &__name {
+        color: #cc8a3c;
+    }
 }
 
 .activity__btn {
@@ -28,4 +32,8 @@ body {
     &:hover {
         background-color: #528884; 
     }
+}
+.flexdisplay1 {
+    display: flex;
+    flex-direction: row;
 }
