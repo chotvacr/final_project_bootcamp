@@ -2,54 +2,47 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
 body {
-    background-color:  $background-color; 
-    color: #45565d; 
-    background-attachment: fixed;
-    font-family: 'Courier New', Courier, monospace;
     margin: 0;  
+}
+.container {
+    background-image: url(/img/juuso-salminen-zA50EwhSCgg-unsplash.jpg);
+    background-position: right center; 
+	background-repeat: no-repeat; 
+	background-size:80%; 
+	background-attachment:fixed;
 }
 
 .detail {
+    width: 35%; 
+    padding-left: 5%;
+    padding-top: 80px;
+    padding-bottom: 15%; 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    background-color: #feffff;
 
     &--headline {
-        background-color: #abc9c7;
-        width: 50vw;
-        padding: 10px; 
+        width: 80%;
+        background-color: #fafafa;
+        padding-left: 20%;
     }
-
     &--facts {
-        background-color: #abc9c7;
-        width: 50vw;
-        padding: 10px;
+        width: 80%;
+        background-color: #fafafa;
+        padding-left: 20%;
     }
 
-    &--registration {
-        background-color: #abc9c7;
-        width: 50vw;
+    &--related__name {
+        background-color: rgb(214, 189, 189);
+        margin-bottom: 5px;
         padding: 10px; 
+        text-align: center;
     }
-
-    &--login {
-        background-color: #abc9c7;
-        width: 50vw;
-        padding: 10px;
+    &--related__link {
+        text-decoration: none;
     }
-
-    &--about {
-        background-color: #abc9c7;
-        width: 50vw;
-        padding: 10px;
-    }
-
-    &--related {
-        background-color: #abc9c7;
-        width: 50vw;
-        padding: 10px;
-        margin-bottom: 10vh; 
-    }
+   
 }
 
 

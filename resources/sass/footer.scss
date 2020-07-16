@@ -13,6 +13,11 @@
     width: 100vw;
     padding-left: 30px;
     padding-right: 30px;
+    position: fixed; 
+    bottom: -120px;
+    width: 100%;
+
+    
 
 .links--link {
         margin: 10; 
@@ -25,4 +30,10 @@
 
 .invisible {
     background: red;
+}
+
+.footer:hover {
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
 }

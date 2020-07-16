@@ -3,9 +3,20 @@
 
 @extends('layouts.layout')
 
- @section('content')
-    @auth
+@section('content')
+    
+    
     <div class="container">
+        @guest
+        <div class="personalinfo--guest"
+            <div>
+                <h2>Teacher Name: {{ $user->name }} {{ $user->surname }}</h2>
+                <p> Teacher Contact: {{ $user->email }} </p>
+                <p>{{ $user->description }}</p>
+            </div>
+        </div>
+        @endguest
+        @auth
             <div class="personalinfo">
                 <h1 class="personalinfo__welcome">Welcome {{Auth::user()->name}}</h1>
     
@@ -79,7 +90,6 @@
     
                     @endforeach
                 </div>
-            </div>
         @endauth
     </div>
 
