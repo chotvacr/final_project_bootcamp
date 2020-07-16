@@ -1,5 +1,5 @@
 <!--creates new Activity-->
-<link rel="stylesheet" type="text/css" href="{{ asset('css/activity.create.css') }}" >
+<link rel="stylesheet" type="text/css" href="{{ asset('css/create.css') }}" >
 
 @extends('layouts.layout')
 @section('content')
@@ -36,35 +36,35 @@
     </div>
     <div>
         <label>Name</label>
-        <input type="text" name="name">
+        <input class="input" type="text" name="name" placeholder="required">
     </div>
     <div>
         <label>Description</label>
-        <input type="text" name="description" >
+        <input class="input" type="text" name="description" placeholder="min 100 characters">
     </div>
     <div>
         <label>Group Size</label>
-        <input type="text" name="group_size" >
+        <input class="input" type="text" name="group_size" placeholder="min-size 1">
     </div>
     <div>
         <label>Price</label>
-        <input type="text" name="price" >
+        <input class="input" type="text" name="price" placeholder="required">
     </div>
     <div>
         <label>Date and Time of Activity</label>
-        <input type="datetime-local" name="date_time" value="YYYY-MM-DDTHH:MM">
+        <input class="input" type="datetime-local" name="date_time" value="YYYY-MM-DDTHH:MM">
     </div>
     <div>
         <label>Address of activity</label>
-        <input type="text" name="address" >
+        <input class="input" type="text" name="address" placeholder="required">
     </div>
     <div>
         <label>Postcode</label>
-        <input type="text" name="postcode" >
+        <input class="input" type="text" name="postcode" placeholder="required">
     </div>
     <div>
         <label>Contact email</label>
-        <input type="text" name="email" >
+        <input class="input" type="text" name="email" value="{{ Auth::user()->email }}">
     </div>
 
     <button type="submit">Save my new activity</button>

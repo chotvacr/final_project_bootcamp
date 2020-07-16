@@ -4,6 +4,7 @@ body {
   background-image: url(/img/taneli-lahtinen-e57Hpo-Qek4-unsplash.jpg);
   background-attachment: fixed;
   font-family: "Courier New", Courier, monospace;
+  margin: 0;
 }
 
 .edit {

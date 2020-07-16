@@ -4,12 +4,6 @@
 @extends('layouts.layout')
 @section('content')
 
-<!--@if ($city->name == 'Prague')
-    class="prague"
-    @elseif ($city->name == 'Nuremberg')
-    class="nuremberg"
-    @endif>-->
-
 <div class="city">
 
     <div class="city--head"><h1>Welcome to {{ $city->name}}</h1></div>
@@ -17,10 +11,23 @@
 
     <div class="city--category">
         @foreach ($categories as $category)
-        <h2 class="city--category__name"> <a class="city--category__link" href="{{ route('activity.show', [$city->id, $category->id]) }}">{{ $category->name }}</a></h2>
-            
-            <p class="city--category__item">{{ $category->description }}</p>
+        <div @if($category->name== 'Helping')
+            class="city--category__helping"
+            @elseif($category->name== 'Language Classes')
+            class="city--category__language"
+            @elseif($category->name== 'Coding')
+            class="city--category__coding"
+            @elseif($category->name== 'Cooking Classes')
+            class="city--category__cooking"
+            @endif>
+                <a class="city--category__link" href="{{ route('activity.show', [$city->id, $category->id]) }}">{{ $category->name }}</a>
+                <p class="city--category__item">{{ $category->description }}</p>
+        </div>
+        
+        
         @endforeach
+        
+        
     </div>
   
 </div>

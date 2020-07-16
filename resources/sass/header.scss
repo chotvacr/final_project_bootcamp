@@ -1,10 +1,21 @@
+@import 'variables'; 
+
+.body {
+    margin: 0; 
+}
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    text-align: center;
+    height: 70px;
+    background-color: $background-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
     &--image {
-        height: 20vh;
+        height: 100px;
 
         @media screen and (max-width: 510px) {
             height: 15vh; 
@@ -22,13 +33,15 @@
 
 .nav--link {
     text-decoration: none;
-        margin: 10px; 
-        padding: 10px; 
-        background-color: #e3f0f0;
+    margin: 10px; 
+    padding: 10px; 
+    background-color: $background-color; 
+    color: black; 
 
     
     &:hover {
-        background-color: #528884; 
+        background-color: black;
+        color: $background-color; 
     }
 }
 

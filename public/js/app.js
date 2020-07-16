@@ -28717,31 +28717,24 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
     _defineProperty(_assertThisInitialized(_this), "componentDidMount", function () {
       var url = window.location.pathname.split('/');
       var city_id = url[2];
-      var category_id = url[3]; // const activity_id = url[3];
-
+      var category_id = url[3];
       console.log(city_id, category_id);
       fetch("/api/activity?city_id=".concat(city_id, "&category_id=").concat(category_id), {
         headers: {
           'Accept': 'application/json',
-          // we expect JSON as response
-          'Content-Type': 'application/json' // if we are sending something in the body, it is JSON
-
+          'Content-Type': 'application/json'
         }
       }).then(function (response) {
-        // if the response code is 200 (OK)
         if (response.status == 200) {
-          // parse it as JSON and do the typical stuff
           response.json().then(function (data) {
-            console.log(data); // set the data into this component's state
+            console.log(data);
 
             _this.setState({
               data: data
             });
           });
         } else {
-          // otherwise react on the error code
           if (response.status == 401) {
-            // signal to the App that authentication failed
             _this.props.onFailedAuthentication();
           }
         }
@@ -28763,11 +28756,11 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
       }
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "flexdisplay1"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flexdisplay"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "activity-list-detail"
+        className: "activities"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "activities--list"
       }, this.state.data.map(function (activity) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity",
@@ -28783,8 +28776,10 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
         }, activity.date_time), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity__address"
         }, activity.address));
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-        className: "activity-list-detail__map",
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "map"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        className: "map__show",
         src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163931.25644248963!2d14.32553874982573!3d50.05958535668972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b939c0970798b%3A0x400af0f66164090!2sPraha!5e0!3m2!1scs!2scz!4v1594736640583!5m2!1scs!2scz",
         width: "600",
         height: "450",
@@ -28853,6 +28848,17 @@ if (document.getElementById('react')) {
 /*!****************************************!*\
   !*** ./resources/sass/categories.scss ***!
   \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/create.scss":
+/*!************************************!*\
+  !*** ./resources/sass/create.scss ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -28949,9 +28955,9 @@ if (document.getElementById('react')) {
 /***/ }),
 
 /***/ 0:
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ./resources/sass/profilepage.scss ./resources/sass/profileedit.scss ./resources/sass/header.scss ./resources/sass/footer.scss ./resources/sass/activities.scss ./resources/sass/register.scss ./resources/sass/login.scss ./resources/sass/categories.scss ./resources/sass/detail.scss ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ./resources/sass/profilepage.scss ./resources/sass/profileedit.scss ./resources/sass/header.scss ./resources/sass/footer.scss ./resources/sass/activities.scss ./resources/sass/register.scss ./resources/sass/login.scss ./resources/sass/categories.scss ./resources/sass/detail.scss ./resources/sass/create.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -28966,7 +28972,8 @@ __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcam
 __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\register.scss */"./resources/sass/register.scss");
 __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\login.scss */"./resources/sass/login.scss");
 __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\categories.scss */"./resources/sass/categories.scss");
-module.exports = __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\detail.scss */"./resources/sass/detail.scss");
+__webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\detail.scss */"./resources/sass/detail.scss");
+module.exports = __webpack_require__(/*! c:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\create.scss */"./resources/sass/create.scss");
 
 
 /***/ })

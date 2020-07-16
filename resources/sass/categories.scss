@@ -1,40 +1,144 @@
-body {
-    background-color:  #f4f3f1;
-    color: #45565d; 
-    background-image: url(/img/taneli-lahtinen-e57Hpo-Qek4-unsplash.jpg);
-    background-attachment: fixed;
-    font-family: 'Courier New', Courier, monospace;
-
+@import 'variables'; 
+.body {
+    margin: 0; 
 }
-
 .city{
-    background-color: #f4f3f1;
+    background-color: $background-color;
     display: flex;
     flex-direction: column;
-    opacity: 0.8;
-    font-family: 'Courier New', Courier, monospace;   
+    align-items: center;
+    font-family: $font-family;   
 
     &--head {
         text-align: center;
+        width: 80vw; 
     }
 
     &--subhead {
         text-align: center;
+        width: 80vw; 
+        color: $text-color; 
     }
 
     &--category {
-        margin: 5px 30vw 50px;
+        width: 80vw; 
         text-align: center;
         padding-top: 5vh;
         padding-bottom: 13vh;
-        background-color: #f4f3f1;
-        color: #45565d; 
+        color: $text-color; 
         opacity: 0.9; 
         border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         &__link {
-            color: #cc8a3c;
+            color: black; 
+            text-decoration: none;
+            font-size: 40px;
+            font-weight: 900;
         }
+        &__item {
+            color: black; 
+
+        }
+
+        &__helping {
+            padding: 3px; 
+            width: 50vw; 
+            height: 30vh;
+            border-radius: 25px;
+            background-color: $background-color; 
+            border: 1px solid $text-color;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                width: 50vw; 
+                height: 30vh;
+                border-radius: 25px; 
+                background-image: url(/img/roman-kraft-0EVKn3-5JSU-unsplash.jpg);
+                background-size: cover;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        &__language {
+            padding: 3px; 
+            width: 50vw; 
+            height: 30vh;
+            border-radius: 25px;
+            background-color: $background-color; 
+            border: 1px solid $text-color;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                width: 50vw; 
+                height: 30vh;
+                border-radius: 25px; 
+                background-image: url(/img/joshua-rawson-harris-KRELIShKxTM-unsplash.jpg);
+                background-size: cover;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        &__coding {
+            padding: 3px; 
+            width: 50vw; 
+            height: 30vh;
+            border-radius: 25px;
+            background-color: $background-color; 
+            border: 1px solid $text-color; 
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                width: 50vw; 
+                height: 30vh;
+                border-radius: 25px; 
+                background-image: url(/img/safar-safarov-MSN8TFhJ0is-unsplash.jpg);
+                background-size: cover;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        &__cooking {
+            padding: 3px; 
+            width: 50vw; 
+            height: 30vh;
+            border-radius: 25px;
+            background-color: $background-color; 
+            border: 1px solid $text-color; 
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                border: 1px solid $background-color;
+                width: 50vw; 
+                height: 30vh;
+                border-radius: 25px; 
+                background-image: url(/img/brooke-lark-08bOYnH_r_E-unsplash.jpg);
+                background-size: cover;
+                color: white; 
+            }
+        }
+
     }
 }
+
+
+
+
+
+
+
+
+
+
 

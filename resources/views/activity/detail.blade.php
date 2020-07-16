@@ -6,25 +6,30 @@
 @section('content')
 
 <div class="detail">
-    <!--Example Pictures of that specific Activity-->
+    <!--Example Pictures of that specific Activity
     <div class="detail--pictures">
         <img class="detail--pictures__item" src="{{ asset('img/prague.jpg') }}" style="height: 100px">    
         <img class="detail--pictures__item" src="{{ asset('img/prague.jpg') }}" style="height: 100px"> 
         <img class="detail--pictures__item" src="{{ asset('img/prague.jpg') }}" style="height: 100px"> 
     </div> 
+    -->
 
     <div class="detail--headline">
         <h1 class="detail--headline__name">{{ $activity->name }}</h1>
-        <p class="headline--description">{{ $activity->description }}</p>
+        <p class="detail--headline__description"> This awaits you: {{ $activity->description }}</p>
         <br>
     </div>
 
     <div class="detail--facts">
-        <p class="detail--fact">Available Places: {{$activity->group_size}}</p>
-        <p class="detail--fact">Starts: {{$activity->date_time}}</p>
-        <p class="detail--fact">Address: {{$activity->adress}}</p>
-        <p class="detail--fact">Postcode: {{$activity->postcode}}</p>
-        <p class="detail--fact">Price: {{$activity->price}}</p>
+        <p class="detail--facts__item">Available Places: {{$activity->group_size}}</p>
+        <p class="detail--facts__item">Starts: {{$activity->date_time}}</p>
+        <p class="detail--facts__item">Address: {{$activity->adress}}</p>
+        <p class="detail--facts__item">Postcode: {{$activity->postcode}}</p>
+        @if ($city->id == 1)
+            <p class="detail--facts__item">Price in CZK: {{$activity->price}}</p>
+        @elseif($city->id == 2)
+            <p class="detail--facts__item">Price in EUR: {{$activity->price}}</p>
+        @endif
     </div>
 
 
@@ -37,7 +42,7 @@
             <input type="hidden" value="{{Auth::user()->id}}" name="user_id">
             <input type="hidden" value="{{$activity->id}}" name="activity_id">
         
-        <button class="registration--button" type="submit" >Register for this activity</button>
+        <div class="button"><button class="btn" type="submit" >Register for this activity</button></div>
         @if (session('alert'))
             <div class="alert alert-success">
                 {{ session('alert') }}
@@ -50,25 +55,27 @@
 
     @guest
     <div class="detail--login">
-        <a class="login--link" href="/login">Login to take part</a>  
+        <a class="registration__button" href="/login">Login to take part</a>  
     </div>
     <br>    
     @endguest
     
-    
+    <!--About Creator of Activity-->
     <div class="detail--about">
         @if ($owner !== null) 
-        <h2>About activity creator</h2>
-        <img src="" alt="">
-        <p>{{ $owner->name }}</p>
+        <h2>About {{ $owner->name }}:</h2>
         <p>{{ $owner->description }}</p>
-        <p>Contact: {{ $activity->email }}</p>
+        <p>Contact Me: {{ $activity->email }}</p>
         @endif
     </div> 
 
+    <!-- More Activites created by that "Teacher"-->
     <div class="detail--related">
-        <h2>More Activities by that teacher</h2>
-        <p>{{ $owner->activityname }}</p>
+        <h2>More Activities by {{ $owner->name }}</h2>
+        @foreach ($activities as $activity)
+        <a href="{{ route('activity.detail', [$city->id, $category->id, $activity->id]) }}">{{ $activity->name }}</a>
+        @endforeach
+        
     </div>
 </div>
     
