@@ -20,14 +20,27 @@
             @elseif($category->name== 'Cooking Classes')
             class="city--category__cooking"
             @endif>
-                <a class="city--category__link" href="{{ route('activity.show', [$city->id, $category->id]) }}">{{ $category->name }}</a>
-                <p class="city--category__item">{{ $category->description }}</p>
+                <div @if($category->name== 'Helping')
+                    class="helping--child" 
+                    @elseif($category->name== 'Language Classes')
+                    class="language--child"
+                    @elseif($category->name== 'Coding')
+                    class="coding--child"
+                    @elseif($category->name== 'Cooking Classes')
+                    class="cooking--child"
+                    @endif><a class="city--category__link" href="{{ route('activity.show', [$city->id, $category->id]) }}">{{ $category->name }}</a>
+                </div>
+                <p @if($category->name== 'Helping')
+                    class="helping--item"
+                    @elseif($category->name== 'Language Classes')
+                    class="language--item"
+                    @elseif($category->name== 'Coding')
+                    class="coding--item"
+                    @elseif($category->name== 'Cooking Classes')
+                    class="cooking--item"
+                    @endif>{{ $category->description }}</p>
         </div>
-        
-        
         @endforeach
-        
-        
     </div>
   
 </div>

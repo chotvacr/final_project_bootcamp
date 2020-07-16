@@ -3,7 +3,13 @@
     margin: 0; 
 }
 .city{
+    padding-top: 70px;
     background-color: $background-color;
+    background-image: url(/img/emile-seguin-R9OueKOtGGU-unsplash.jpg);
+    background-position: 50% 60%; 
+	background-repeat: no-repeat; 
+	background-size:cover; 
+	background-attachment:fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +18,7 @@
     &--head {
         text-align: center;
         width: 80vw; 
+        color: $text-color; 
     }
 
     &--subhead {
@@ -21,7 +28,7 @@
     }
 
     &--category {
-        width: 80vw; 
+        width: 90vw; 
         text-align: center;
         padding-top: 5vh;
         padding-bottom: 13vh;
@@ -29,8 +36,9 @@
         opacity: 0.9; 
         border-radius: 25px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
         &__link {
             color: black; 
@@ -45,7 +53,7 @@
 
         &__helping {
             padding: 3px; 
-            width: 50vw; 
+            width: 40vw; 
             height: 30vh;
             border-radius: 25px;
             background-color: $background-color; 
@@ -56,17 +64,24 @@
             align-items: center;
             justify-content: center;
             &:hover {
-                width: 50vw; 
+                border: 1px solid $background-color;
+                width: 40vw; 
                 height: 30vh;
                 border-radius: 25px; 
                 background-image: url(/img/roman-kraft-0EVKn3-5JSU-unsplash.jpg);
                 background-size: cover;
                 color: rgba(0, 0, 0, 0.5);
             }
+            &:hover .helping--child{
+                font-style: italic;
+            }
+            &:hover .helping--item{
+                visibility: hidden;
+            }
         }
         &__language {
             padding: 3px; 
-            width: 50vw; 
+            width: 40vw; 
             height: 30vh;
             border-radius: 25px;
             background-color: $background-color; 
@@ -77,38 +92,24 @@
             align-items: center;
             justify-content: center;
             &:hover {
-                width: 50vw; 
+                border: 1px solid $background-color;
+                width: 40vw; 
                 height: 30vh;
                 border-radius: 25px; 
                 background-image: url(/img/joshua-rawson-harris-KRELIShKxTM-unsplash.jpg);
                 background-size: cover;
                 color: rgba(0, 0, 0, 0.5);
             }
+            &:hover .language--child{
+                font-style: italic;
+            }
+            &:hover .language--item{
+                visibility: hidden;
+            }
         }
         &__coding {
             padding: 3px; 
-            width: 50vw; 
-            height: 30vh;
-            border-radius: 25px;
-            background-color: $background-color; 
-            border: 1px solid $text-color; 
-            margin-bottom: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            &:hover {
-                width: 50vw; 
-                height: 30vh;
-                border-radius: 25px; 
-                background-image: url(/img/safar-safarov-MSN8TFhJ0is-unsplash.jpg);
-                background-size: cover;
-                color: rgba(0, 0, 0, 0.5);
-            }
-        }
-        &__cooking {
-            padding: 3px; 
-            width: 50vw; 
+            width: 40vw; 
             height: 30vh;
             border-radius: 25px;
             background-color: $background-color; 
@@ -120,12 +121,46 @@
             justify-content: center;
             &:hover {
                 border: 1px solid $background-color;
-                width: 50vw; 
+                width: 40vw;  
+                height: 30vh;
+                border-radius: 25px; 
+                background-image: url(/img/safar-safarov-MSN8TFhJ0is-unsplash.jpg);
+                background-size: cover;
+                color: rgba(0, 0, 0, 0.5);
+            }
+            &:hover .coding--child{
+                font-style: italic;
+            }
+            &:hover .coding--item{
+                visibility: hidden;
+            }
+        }
+        &__cooking {
+            padding: 3px; 
+            width: 40vw; 
+            height: 30vh;
+            border-radius: 25px;
+            background-color: $background-color; 
+            border: 1px solid $text-color; 
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                border: 1px solid $background-color;
+                width: 40vw; 
                 height: 30vh;
                 border-radius: 25px; 
                 background-image: url(/img/brooke-lark-08bOYnH_r_E-unsplash.jpg);
                 background-size: cover;
                 color: white; 
+            }
+            &:hover .cooking--child{
+                font-style: italic;
+            }
+            &:hover .cooking--item{
+                visibility: hidden;
             }
         }
 

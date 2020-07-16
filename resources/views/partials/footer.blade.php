@@ -5,6 +5,16 @@
 
 <div class="footer">
 
+    <div class="homepage--container__info">
+        <h3>ProActive</h3>
+        <p>Our Mission is to bring you together.</p>
+    </div>
+    <div class="homepage--container__contact">
+        <h3>Contact</h3>
+        <p>Prague / Nuremberg</p>
+        <p>infor@examplemail.mail</p>
+        <p>+ 0123456789</p>
+    </div>
     <div class="content">
         @if (Route::current()->getName() == 'city.index')
         <p class="reference">Photo by ÉMILE SÉGUIN 🇨🇦 on Unsplash</p>
@@ -16,7 +26,7 @@
 
     <div class="links">
         @if(Route::current()->getName() == 'city.index')
-        <div></div>
+        
         @else 
         <a class="links--link" href="">Privacy</a>
 
