@@ -1,8 +1,12 @@
+@import 'variables'; 
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
 body {
-    background-color:  #f4f3f1;
+    background-color:  $background-color; 
     color: #45565d; 
     background-attachment: fixed;
     font-family: 'Courier New', Courier, monospace;
+    margin: 0;  
 }
 
 .detail {
@@ -21,41 +25,74 @@ body {
         width: 50vw;
         padding: 10px;
     }
+
+    &--registration {
+        background-color: #abc9c7;
+        width: 50vw;
+        padding: 10px; 
+    }
+
+    &--login {
+        background-color: #abc9c7;
+        width: 50vw;
+        padding: 10px;
+    }
+
+    &--about {
+        background-color: #abc9c7;
+        width: 50vw;
+        padding: 10px;
+    }
+
+    &--related {
+        background-color: #abc9c7;
+        width: 50vw;
+        padding: 10px;
+        margin-bottom: 10vh; 
+    }
 }
 
 
-
-.detail--registration{
-    background-color: #abc9c7;
-    width: 50vw;
-    padding: 10px;
-}
-.detail--login {
-    background-color: #abc9c7;
-    width: 50vw;
-    padding: 10px;
-}
-
-.detail--about{
-    background-color: #abc9c7;
-    width: 50vw;
-    padding: 10px;
-}
-
-.detail--related {
-    background-color: #abc9c7;
-    width: 50vw;
-    padding: 10px;
-    margin-bottom: 10vh;
-}
-
-.registration--button {
-    margin: 10px; 
-    padding: 10px; 
-    background-color: #e3f0f0;
-    text-decoration: none;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-.registration--button:hover {
-    background-color: #528884; 
+.btn {
+    line-height: 50px;
+	height: 50px;
+	text-align: center;
+	width: 250px;
+   
+    color: #FFF;
+	transition: all 0.5s;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(255,255,255,0.1);
+        transition: all 0.3s;
+    }
+    &:hover::before {
+        opacity: 0 ;
+	    transform: scale(0.5,0.5);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.3s;
+        border: 1px solid rgba(255,255,255,0.5);
+        transform: scale(1.2,1.2);
+    }
+    &:hover::after {
+        opacity: 1;
+	    transform: scale(1,1);
+    }
 }

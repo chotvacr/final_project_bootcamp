@@ -16,9 +16,12 @@ class ProfileController extends Controller
         $user = User::findOrFail($user_id); 
         // activites for hosting (not participating) activities:
         $activities = $user->activities;
+        
         $registered = $user->registered; 
         
-        return view('profile.show', compact('user', 'activities', 'registered')); 
+        $activity = $user->activities->first(); 
+        $register = $user->registered->first(); 
+        return view('profile.show', compact('user', 'activities', 'registered', 'activity', 'register')); 
 
     }
 

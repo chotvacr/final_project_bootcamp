@@ -34,6 +34,7 @@ mix.react('resources/js/app.js', 'public/js')
     .sass('resources/sass/login.scss', 'public/css/login.css')
     .sass('resources/sass/categories.scss', 'public/css/categories.css')
     .sass('resources/sass/detail.scss', 'public/css/detail.css')
+    .sass('resources/sass/create.scss', 'public/css/create.css')
  
     .browserSync({
         host: 'localhost',

@@ -1,9 +1,23 @@
+.body {
+  margin: 0;
+}
+
 .footer {
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
 }
-.footer--link {
+.footer .links--link {
   margin: 10;
+}
+
+.content {
+  color: white;
+}
+
+.invisible {
+  background: red;
 }
 /*# sourceMappingURL=footer.css.map*/

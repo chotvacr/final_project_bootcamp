@@ -32,11 +32,12 @@ class ActivityController extends Controller
         $activity = Activity::findOrFail($activity_id); 
         //owner of activity
         $owner = $activity->user;
-        
-        $user = auth()->user(); 
-        // return $activity; 
+        $activities = Activity::where('user_id', $owner->id)->get(); 
 
-        return view('activity.detail', compact('activity', 'city', 'owner','user', 'category')); 
+        $user = auth()->user(); 
+
+
+        return view('activity.detail', compact('activity', 'city', 'owner','user', 'category', 'activities')); 
     }
 
     public function create()
@@ -54,17 +55,17 @@ class ActivityController extends Controller
         $this->validate($request, 
             [
                 'user_id' => 'required',
-                'city_id' => 'required|max:255',
-                'category_id' => 'required|max:255',
-                'name' => 'required|string|max:255',
-                'description' => 'required|string|max:255',
-                'group_size' => 'required|int|max:255',
+                'city_id' => 'required',
+                'category_id' => 'required',
+                'name' => 'required|string',
+                'description' => 'required|string|min:100|max:500',
+                'group_size' => 'required|int|min:1|max:50',
                 'price' => 'required|int|max:255',
                 // 'picture' => 'required|string|max:255',
                 'date_time' => 'required|string|max:255',
-                'address' => 'required|string|max:255',
-                'postcode' => 'required|int',
-                'email' => 'required|string|max:255',
+                'address' => 'required|string|min:10|max:255',
+                'postcode' => 'required|int|min:4',
+                'email' => 'required|string|min:6|max:255',
             
             ]
         ); 
@@ -97,10 +98,15 @@ class ActivityController extends Controller
     {
         
         $user = auth()->user(); 
+        $user_id = auth()->user()->id; 
         $activity_id = $request->input('activity_id');
         $activity = Activity::findOrFail($activity_id); 
-       
-        if ($user->registered()->where('activity_id', $activity_id)->exists())
+
+        if ($user_id === $activity->user_id)
+        {
+            return redirect()->back()->with('alert', 'You cannot register for your own activity.'); 
+        }
+        elseif ($user->registered()->where('activity_id', $activity_id)->exists())
         {
            return redirect()->back()->with('alert', 'Sorry, you are registered!');
         }

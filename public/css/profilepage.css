@@ -1,10 +1,20 @@
 body {
-  background-color: #f4f3f1;
+  background-image: url(/img/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg);
+  background-size: cover;
   color: #45565d;
-  background-image: url(/img/taneli-lahtinen-e57Hpo-Qek4-unsplash.jpg);
   background-attachment: fixed;
   height: 80vh;
   font-family: "Courier New", Courier, monospace;
+  margin: 0;
+}
+
+.personalinfo {
+  background-color: #e1eaee;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: -1vw;
+  margin-right: -10vw;
 }
 
 .activities {
@@ -13,15 +23,20 @@ body {
   flex-wrap: wrap;
   text-align: center;
 }
-.activities__createdactivities {
-  width: 15vw;
+.activities__created {
+  margin-top: 10px;
+  width: 40vw;
+  background-color: #e1eaee;
+  border-radius: 25px;
+}
+.activities__registered {
+  margin-top: 10px;
+  width: 40vw;
+  background-color: #e1eaee;
+  border-radius: 25px;
 }
 .activities__buttons {
   display: flex;
-  justify-content: space-between;
-}
-
-.personalinfo {
-  text-align: center;
+  justify-content: center;
 }
 /*# sourceMappingURL=profilepage.css.map*/
