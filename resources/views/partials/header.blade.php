@@ -94,6 +94,24 @@
         @elseif (Route::current()->getName() == 'activity.detail')
         <a href="/">        <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
         @endif
+
+        @if(Route::current()->getName() == 'activity.show')
+            <!--Search-bar in Activity Overview Page-->
+            <div class="header--search">
+                <form method="POST" action="{{ action('ActivityController@search') }}">
+                    @csrf
+                    <div class="header--search__input">
+                        <input type="hidden" name="city_id" value="{{ $city->id }}">
+                        <input type="hidden" name="category_id" value="{{ $category->id }}">
+                        <input type="text" class="input--form" name="activity_input" placeholder="Search Activity">
+                        <span class="input--form-btn">
+                            <button type="submit" class="btn">Search</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            @endif
+
         <ul class="header--nav">
                 <a class="nav--link" href="/logout">Logout</a>
                 <a class="nav--link" href="/profile/{{ Auth::user()->id }}">My Profile</a>
