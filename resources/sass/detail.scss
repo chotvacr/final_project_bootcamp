@@ -25,67 +25,59 @@ body {
     &--headline {
         width: 80%;
         background-color: #fafafa;
-        padding-left: 20%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
     &--facts {
         width: 80%;
         background-color: #fafafa;
-        padding-left: 20%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    &--registration {
+        width: 80%;
+        background-color: #fafafa;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    &--login {
+        width: 80%;
+        background-color: #fafafa;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    &--about {
+        width: 80%;
+        background-color: #fafafa;
+        padding-left: 10%;
+        padding-right: 10%;
+        
+    }
+    &--related {
+        width: 80%;
+        background-color: #fafafa;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     &--related__name {
-        background-color: rgb(214, 189, 189);
+        background-color: #eee8e8;
         margin-bottom: 5px;
         padding: 10px; 
-        text-align: center;
+        
     }
     &--related__link {
+        text-decoration: none;
+    }
+    &--login__name {
+        background-color: #eee8e8;
+        margin-bottom: 5px;
+        padding: 10px; 
+    }
+    &--login__link {
         text-decoration: none;
     }
    
 }
 
 
-.btn {
-    line-height: 50px;
-	height: 50px;
-	text-align: center;
-	width: 250px;
-   
-    background: $blueish; 
-	transition: all 0.5s;
-    position: relative;
-    
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        background-color: rgba(255,255,255,0.1);
-        transition: all 0.3s;
-    }
-    &:hover::before {
-        opacity: 0 ;
-	    transform: scale(0.5,0.5);
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        opacity: 0;
-        transition: all 0.3s;
-        border: 1px solid rgba(255,255,255,0.5);
-        transform: scale(1.2,1.2);
-    }
-    &:hover::after {
-        opacity: 1;
-	    transform: scale(1,1);
-    }
-}

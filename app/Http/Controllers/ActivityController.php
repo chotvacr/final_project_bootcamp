@@ -58,7 +58,7 @@ class ActivityController extends Controller
                 'city_id' => 'required',
                 'category_id' => 'required',
                 'name' => 'required|string',
-                'description' => 'required|string|min:100|max:500',
+                'description' => 'required|string|min:30|max:500',
                 'group_size' => 'required|int|min:1|max:50',
                 'price' => 'required|int|max:255',
                 // 'picture' => 'required|string|max:255',

@@ -19,7 +19,9 @@
         @if (Route::current()->getName() == 'city.index')
         <p class="reference">Photo by ÉMILE SÉGUIN 🇨🇦 on Unsplash</p>
         @elseif (Route::current()->getName() == 'city.show')
-        <p class="reference">Photo by Brooke Lark on Unsplash</p>
+        <p class="reference">Photos by Brooke Lark, Roman Kraft, Joshua Rawson-Harris, Safar Safarov and Brook Lark on Unsplash</p>
+        @elseif (Route::current()->getName() == 'activity.detail')
+        <p class="reference">Photo by Juuso Salminen on Unsplash</p>
         @endif
     </div>
     

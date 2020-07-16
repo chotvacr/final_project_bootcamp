@@ -47,7 +47,7 @@
     
         @guest
         <div class="detail--login">
-            <a class="registration__button" href="/login">Login to take part</a>  
+            <div class="detail--login__name"><a class="detail--login__link" href="/login">Login to take part</a></div>
         </div>
         <br>    
         @endguest
