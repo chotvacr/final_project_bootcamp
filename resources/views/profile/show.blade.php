@@ -77,7 +77,7 @@
                             <h3>{{ $activity->name }}</h3>
                             <p><b>Date and Time of Activity:</b><br>{{$activity->date_time}}</p>
                             <p><b>Location of Activity:</b><br>{{$activity->address}}</p>
-                            <p>Name of Teacher: {{ $activity->user_id }}</p>
+                            <p><a href="/profile/{{ $activity->user_id }}">Visit</a> teachers profile</p>
                             <p>Contact Email: {{ $activity->email }}</p>
                         </div>
     
