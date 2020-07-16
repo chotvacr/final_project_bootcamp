@@ -29,6 +29,8 @@
             <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
         @elseif (Route::current()->getName() == 'profile.edit')
             <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
+        @elseif (Route::current()->getName() == 'activity.search')
+            <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
         @elseif (Route::current()->getName() == 'activity.show')
             <a href="/"><img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
         @elseif (Route::current()->getName() == 'activity.detail')
@@ -90,6 +92,8 @@
         @elseif (Route::current()->getName() == 'profile.edit')
         <a href="/">       <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo">  </a>
         @elseif (Route::current()->getName() == 'activity.show')
+        <a href="/">        <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
+        @elseif (Route::current()->getName() == 'activity.search')
         <a href="/">        <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
         @elseif (Route::current()->getName() == 'activity.detail')
         <a href="/">        <img class="header--image" src="{{ asset('img/logo.png') }}" alt="logo"> </a>
