@@ -12,10 +12,4 @@ Homestead.yaml
 npm-debug.log
 phploy.ini
 yarn-error.log
-<<<<<<< HEAD
-
-=======
-/public/css
-phploy.ini
-/public/img
->>>>>>> 0ea19b65a67340219c3f467308a611a703c13ec9
+public/mix-manifest.json
