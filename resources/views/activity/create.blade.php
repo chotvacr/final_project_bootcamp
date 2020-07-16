@@ -40,7 +40,7 @@
     </div>
     <div>
         <label>Description</label>
-        <input class="input" type="text" name="description" placeholder="min 100 characters">
+        <input class="input" type="text" name="description" placeholder="min 30 characters">
     </div>
     <div>
         <label>Group Size</label>

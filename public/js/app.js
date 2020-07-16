@@ -28653,7 +28653,7 @@ var App = /*#__PURE__*/function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "List of Activities"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_activities__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_activities__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
 
@@ -28877,6 +28877,17 @@ if (document.getElementById('react')) {
 
 /***/ }),
 
+/***/ "./resources/sass/editactivity.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/editactivity.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/footer.scss":
 /*!************************************!*\
   !*** ./resources/sass/footer.scss ***!
@@ -28966,9 +28977,9 @@ if (document.getElementById('react')) {
 /***/ }),
 
 /***/ 0:
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ./resources/sass/profilepage.scss ./resources/sass/profileedit.scss ./resources/sass/header.scss ./resources/sass/footer.scss ./resources/sass/activities.scss ./resources/sass/register.scss ./resources/sass/login.scss ./resources/sass/categories.scss ./resources/sass/detail.scss ./resources/sass/create.scss ./resources/sass/search.scss ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ./resources/sass/profilepage.scss ./resources/sass/profileedit.scss ./resources/sass/header.scss ./resources/sass/footer.scss ./resources/sass/activities.scss ./resources/sass/register.scss ./resources/sass/login.scss ./resources/sass/categories.scss ./resources/sass/detail.scss ./resources/sass/create.scss ./resources/sass/search.scss ./resources/sass/editactivity.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -28985,7 +28996,8 @@ __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_pr
 __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\categories.scss */"./resources/sass/categories.scss");
 __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\detail.scss */"./resources/sass/detail.scss");
 __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\create.scss */"./resources/sass/create.scss");
-module.exports = __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\search.scss */"./resources/sass/search.scss");
+__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\search.scss */"./resources/sass/search.scss");
+module.exports = __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\editactivity.scss */"./resources/sass/editactivity.scss");
 
 
 /***/ })

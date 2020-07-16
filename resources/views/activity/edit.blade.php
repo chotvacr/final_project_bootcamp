@@ -1,6 +1,7 @@
 
 <!--edit Activity-->
-<link rel="stylesheet" type="text/css" href="{{ asset('css/activity.create.css') }}" >
+<link rel="stylesheet" type="text/css" href="{{ asset('css/editactivity.css') }}" >
+
 
 @extends('layouts.layout')
 @section('content')
