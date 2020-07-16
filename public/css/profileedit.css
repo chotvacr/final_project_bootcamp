@@ -6,6 +6,8 @@ body {
 }
 
 .edit {
+  margin-top: 20%;
+  background-color: salmon;
   display: flex;
   flex-direction: column;
   text-align: center;
