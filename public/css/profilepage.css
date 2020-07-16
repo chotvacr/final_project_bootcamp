@@ -3,6 +3,7 @@ body {
   background-size: cover;
   color: #45565d;
   background-attachment: fixed;
+  height: 80vh;
   font-family: "Courier New", Courier, monospace;
   margin: 0;
 }

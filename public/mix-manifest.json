@@ -1,19 +1,26 @@
 {
-    "/js/app.js": "/js/app.js?id=8e00d24eaaf5f22f366b",
+    "/js/app.js": "/js/app.js?id=3d1b4ecda4e63ef6dd44",
     "/css/app.css": "/css/app.css?id=e45c9dae80131e915e5e",
     "/css/homepage.css": "/css/homepage.css?id=295a0fa4017bb6ae22fc",
-    "/css/profilepage.css": "/css/profilepage.css?id=ee3d037b939ca0d80c75",
+    "/css/profilepage.css": "/css/profilepage.css?id=dabd32e601dd279f459a",
     "/css/profileedit.css": "/css/profileedit.css?id=367ffa2bb915bb945b55",
     "/css/header.css": "/css/header.css?id=e6b70c4f77fc874f78dc",
     "/css/footer.css": "/css/footer.css?id=e40156bbc52a03546e8f",
     "/css/activities.css": "/css/activities.css?id=7ad6d34c2ce1caf90736",
+<<<<<<< HEAD
     "/css/register.css": "/css/register.css?id=c406c5d0521420420daf",
     "/css/login.css": "/css/login.css?id=e502f0695853da843f4f",
     "/css/categories.css": "/css/categories.css?id=db67a72913dc4a25fe3b",
+=======
+    "/css/register.css": "/css/register.css?id=c2691ec2225e33daa0c0",
+    "/css/login.css": "/css/login.css?id=abb0bb58d6d82bb65170",
+    "/css/categories.css": "/css/categories.css?id=4d4f544b2f19fcadf377",
+>>>>>>> b26bef58c812a54c5ccc89f4c70e972e15d8bc94
     "/css/detail.css": "/css/detail.css?id=9a5d932401acaa45104f",
     "/css/create.css": "/css/create.css?id=5713273dcdf3abbdf1af",
     "/js/app.js.map": "/js/app.js.map?id=3626052077607ff1ba28",
     "/css/app.css.map": "/css/app.css.map?id=e317a448876e0f19bbf2",
+<<<<<<< HEAD
     "/css/homepage.css.map": "/css/homepage.css.map?id=1b3ae31334e40f0cbb36",
     "/css/profilepage.css.map": "/css/profilepage.css.map?id=2a48ef854052d0a46cb5",
     "/css/profileedit.css.map": "/css/profileedit.css.map?id=56e81cb7ab8af1ac734e",
@@ -25,4 +32,17 @@
     "/css/categories.css.map": "/css/categories.css.map?id=79b99de9105d1068ef13",
     "/css/detail.css.map": "/css/detail.css.map?id=f2ac93d867e5f7fbe4a7",
     "/css/create.css.map": "/css/create.css.map?id=911b3d85bb831ecda0ae"
+=======
+    "/css/homepage.css.map": "/css/homepage.css.map?id=38eb32a1f06b6a0a2158",
+    "/css/profilepage.css.map": "/css/profilepage.css.map?id=03e95d3774441879ad7c",
+    "/css/profileedit.css.map": "/css/profileedit.css.map?id=ceb7f355f667e401746c",
+    "/css/header.css.map": "/css/header.css.map?id=4510b8388394202116b2",
+    "/css/footer.css.map": "/css/footer.css.map?id=4671f30ecde0c012da31",
+    "/css/activities.css.map": "/css/activities.css.map?id=e2b5d44f514f09ced5ef",
+    "/css/register.css.map": "/css/register.css.map?id=1ac4dbf21462b115bdb8",
+    "/css/login.css.map": "/css/login.css.map?id=2268480f26af2db36c43",
+    "/css/categories.css.map": "/css/categories.css.map?id=53668e329bf4949e8f11",
+    "/css/detail.css.map": "/css/detail.css.map?id=8787d682eb859330c6ff",
+    "/css/create.css.map": "/css/create.css.map?id=3e7e07223ebac4ecd2c9"
+>>>>>>> b26bef58c812a54c5ccc89f4c70e972e15d8bc94
 }
