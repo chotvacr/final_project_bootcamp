@@ -1,11 +1,18 @@
 body {
-  background-image: url(/img/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg);
+  background-image: url(/img/artiom-vallat-ipjRrYEQtSQ-unsplash.jpg);
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
   background-size: cover;
-  color: #45565d;
   background-attachment: fixed;
+  color: #45565d;
   height: 80vh;
   font-family: "Courier New", Courier, monospace;
   margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
 .personalinfo {
