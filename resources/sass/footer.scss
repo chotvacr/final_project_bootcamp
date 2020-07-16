@@ -10,8 +10,9 @@
     justify-content: space-between; 
     align-items: center;
     background-color: black;
-    width: 100vw;
+    width: 100%;
     padding-left: 30px;
+    padding-top: 3px;
     padding-right: 30px;
     position: fixed; 
     bottom: -120px;
@@ -36,4 +37,14 @@
     position: fixed; 
     bottom: 0; 
     width: 100%; 
+}
+.homepage--container__info {
+    color: white;
+}
+
+.homepage--container__contact {
+    color: white;
+}
+.links  {
+    color: white;
 }
