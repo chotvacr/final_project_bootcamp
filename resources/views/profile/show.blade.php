@@ -49,10 +49,7 @@
                             <p><b>Date and Time of Activity:</b><br> {{$activity->date_time}}</p>
                             <p><b>Location of Activity:</b><br>{{$activity->address}}</p>
                             <p><b>Description of Activity:</b><br>{{ $activity->description }}</p>
-                            <div>
-                                <p>These People have registered for your Activity: </p>
-                                
-                            </div>
+                            
                         </div>
                         <div class="activities__buttons">
                             <form action="{{ action('ActivityController@removeActivity', 'Auth::user()->id', 'Auth::activity()->id' ) }}" method="post">
