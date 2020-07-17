@@ -47,7 +47,7 @@
                         <input type="hidden" name="category_id" value="{{ $category->id }}">
                         <input type="text" class="input--form" name="activity_input" placeholder="Search Activity">
                         <span class="input--form-btn">
-                            <button type="submit" class="btn">Search</button>
+                            <button type="submit" class="btn--header">Search</button>
                         </span>
                     </div>
                 </form>

@@ -8,7 +8,6 @@ body {
     background-image: url(/img/roman-kraft-0EVKn3-5JSU-unsplash.jpg);
     background-position: right center; 
     background-repeat: no-repeat; 
-    background-size:75% 100%; 
     background-attachment:fixed;
     padding-right: 10%;
 }
@@ -16,7 +15,6 @@ body {
     background-image: url(/img/joshua-rawson-harris-KRELIShKxTM-unsplash.jpg);
     background-position: right center; 
     background-repeat: no-repeat; 
-    background-size:75% 100%; 
     background-attachment:fixed;
     padding-right: 10%;
 }
@@ -24,7 +22,6 @@ body {
     background-image: url(/img/safar-safarov-MSN8TFhJ0is-unsplash.jpg);
     background-position: right center; 
     background-repeat: no-repeat; 
-    background-size:75% 100%; 
     background-attachment:fixed;
     padding-right: 10%;
 }
@@ -32,7 +29,6 @@ body {
     background-image: url(/img/brooke-lark-08bOYnH_r_E-unsplash.jpg);
     background-position: right center; 
     background-repeat: no-repeat; 
-    background-size:75% 100%; 
     background-attachment:fixed;
     padding-right: 10%;
 }
@@ -69,8 +65,7 @@ body {
     &--login {
         width: 80%;
         background-color: #fafafa;
-        padding-left: 10%;
-        padding-right: 10%;
+        
     }
     &--about {
         width: 80%;
@@ -84,6 +79,8 @@ body {
         background-color: #fafafa;
         padding-left: 10%;
         padding-right: 10%;
+        padding-bottom: 9%;
+
     }
 
     &--related__name {
@@ -96,14 +93,29 @@ body {
         text-decoration: none;
     }
     &--login__name {
-        background-color: #eee8e8;
-      
+        background-color: rgb(233, 204, 218);
         padding: 10px; 
+        
     }
     &--login__link {
         text-decoration: none;
     }
-   
+}
+h1 {
+    font-size: 40px;
+}
+.h2 {
+    font-size: 35px;
+}
+.btn--detail {
+    background-color: rgb(233, 204, 218);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 

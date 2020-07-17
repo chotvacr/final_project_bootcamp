@@ -1,21 +1,33 @@
 {
+<<<<<<< HEAD
     "/js/app.js": "/js/app.js?id=6171015228453faf90e8",
+=======
+    "/js/app.js": "/js/app.js?id=8ae3683f3a1b74050cba",
+>>>>>>> ca6de3088a25b5dca81e777c6807a66193e36be2
     "/css/app.css": "/css/app.css?id=e45c9dae80131e915e5e",
     "/css/homepage.css": "/css/homepage.css?id=0063f70170cace475718",
     "/css/profilepage.css": "/css/profilepage.css?id=fc5de2534bfad14a40c0",
     "/css/profileedit.css": "/css/profileedit.css?id=cee6a254d17932308249",
+<<<<<<< HEAD
     "/css/header.css": "/css/header.css?id=a82adf121967a5e92e44",
     "/css/footer.css": "/css/footer.css?id=93b3fc5c52fd9b3d32c1",
     "/css/activities.css": "/css/activities.css?id=dde7952f927214e95e59",
     "/css/register.css": "/css/register.css?id=0001a77fa0bf833a9223",
+=======
+    "/css/header.css": "/css/header.css?id=cc8f5dfbfb5756efa536",
+    "/css/footer.css": "/css/footer.css?id=6339fe860f686f913185",
+    "/css/activities.css": "/css/activities.css?id=1c400e2d1fdc9b85c5f4",
+    "/css/register.css": "/css/register.css?id=7738a9868b218394269e",
+>>>>>>> ca6de3088a25b5dca81e777c6807a66193e36be2
     "/css/login.css": "/css/login.css?id=abb0bb58d6d82bb65170",
     "/css/categories.css": "/css/categories.css?id=56f67cbfadfd7a503f92",
-    "/css/detail.css": "/css/detail.css?id=c223736c0bb1cdef9a89",
+    "/css/detail.css": "/css/detail.css?id=5734c9a543b6d2f18b7e",
     "/css/create.css": "/css/create.css?id=a563df01d7023e2cc4b7",
     "/css/search.css": "/css/search.css?id=524e8b8f83a870a55920",
     "/css/editactivity.css": "/css/editactivity.css?id=4c5e42aebc9cac2f29e3",
-    "/js/app.js.map": "/js/app.js.map?id=68d7fa27900372d9e889",
+    "/js/app.js.map": "/js/app.js.map?id=fe5d3e71ddd1cef12f8e",
     "/css/app.css.map": "/css/app.css.map?id=e317a448876e0f19bbf2",
+<<<<<<< HEAD
     "/css/homepage.css.map": "/css/homepage.css.map?id=893a224229ac94fc4d55",
     "/css/profilepage.css.map": "/css/profilepage.css.map?id=c5bb03abf1f566b9a1cb",
     "/css/profileedit.css.map": "/css/profileedit.css.map?id=0ae55c501325cdbb1c82",
@@ -29,4 +41,19 @@
     "/css/create.css.map": "/css/create.css.map?id=72b135a2780f0038e471",
     "/css/search.css.map": "/css/search.css.map?id=7cf2377a112dade58439",
     "/css/editactivity.css.map": "/css/editactivity.css.map?id=e655a280f107710561cd"
+=======
+    "/css/homepage.css.map": "/css/homepage.css.map?id=080bc6d7e5562e482e26",
+    "/css/profilepage.css.map": "/css/profilepage.css.map?id=8d0b32b86bf38e6fefba",
+    "/css/profileedit.css.map": "/css/profileedit.css.map?id=53dc755eb095e5c2c01e",
+    "/css/header.css.map": "/css/header.css.map?id=67a6597dca199c16ad6a",
+    "/css/footer.css.map": "/css/footer.css.map?id=26b94bf48d3febbae224",
+    "/css/activities.css.map": "/css/activities.css.map?id=b8883082f6eb7de9a6cd",
+    "/css/register.css.map": "/css/register.css.map?id=c3cd43f690016e2498ae",
+    "/css/login.css.map": "/css/login.css.map?id=a1399439662626dca23a",
+    "/css/categories.css.map": "/css/categories.css.map?id=d0f123ad8665fdd6ab2b",
+    "/css/detail.css.map": "/css/detail.css.map?id=8b0161283a65c4603e0e",
+    "/css/create.css.map": "/css/create.css.map?id=f21f23d1f00971e60b63",
+    "/css/search.css.map": "/css/search.css.map?id=a9c0ad8d697b92aaa5d3",
+    "/css/editactivity.css.map": "/css/editactivity.css.map?id=cf23ac074a90d80892c7"
+>>>>>>> ca6de3088a25b5dca81e777c6807a66193e36be2
 }

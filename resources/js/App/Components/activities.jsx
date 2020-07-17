@@ -61,10 +61,9 @@ export default class ActivityList extends React.Component {
                             this.state.data.map(activity => (
 
                                 <div className="activity" key={ activity.id }>
-                                    <a href={`/cities/${activity.city_id}/${activity.category_id}/${activity.id}`}> <div className="activity__name"  >{ activity.name }</div></a> 
+                                    <a href={`/cities/${activity.city_id}/${activity.category_id}/${activity.id}`}> <div className="activity__name"  >{ activity.name }</div></a> <br/>
                                     <div className="activity__description">{ activity.description }</div>
-                                    <div className="activity__datetime">{ activity.date_time }</div>
-                                    <div className="activity__address">{ activity.address }</div>
+                                    <div className="activity__datetime">Date and Time: { activity.date_time }</div>
                                 </div>
                             ))
                         }
