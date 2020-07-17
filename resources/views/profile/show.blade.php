@@ -18,6 +18,7 @@
         @endguest
         @auth
             <div class="personalinfo">
+                <div class="boxinfo">
                 <h1 class="personalinfo__welcome">Welcome {{Auth::user()->name}}</h1>
     
                 <div class="me">
@@ -30,6 +31,7 @@
                     </form>
                     <!-- <a href="{{ route('profile.edit', [$user->id]) }}">Edit information about you</a> -->
                 </div>
+            </div>
             </div>
     
 
