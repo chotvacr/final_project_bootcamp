@@ -13,7 +13,8 @@
   width: 100%;
 }
 .header--image {
-  height: 100px;
+  height: 15vh;
+  padding-top: 10px;
 }
 @media screen and (max-width: 510px) {
   .header--image {

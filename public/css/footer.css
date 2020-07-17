@@ -8,29 +8,34 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
-  width: 100vw;
-  padding-left: 30px;
-  padding-right: 30px;
+  background-color: #c7c1c1;
+  color: transparent;
   position: fixed;
-  bottom: -120px;
-  width: 100%;
+  bottom: 0;
+  width: 100vw;
+  height: 5%;
 }
-.footer .links--link {
-  margin: 10;
-}
-
-.content {
-  color: white;
-}
-
-.invisible {
-  background: red;
-}
-
 .footer:hover {
+  color: black;
+  height: 20%;
+  position: fixed;
+  position: fixed;
   position: fixed;
   bottom: 0;
   width: 100%;
+  width: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 770px) {
+  .footer:hover {
+    font-size: 2px;
+  }
+}
+.footer:hover content {
+  color: white;
+}
+
+.links--link {
+  margin: 10;
 }
 /*# sourceMappingURL=footer.css.map*/

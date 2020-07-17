@@ -4,7 +4,15 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="container">
+<div @if ($category->id == '1')
+        class="containerHelp"
+     @elseif ($category->id == '2')
+        class="containerLanguage"
+     @elseif ($category->id == '3')
+        class="containerCode"
+     @elseif ($category->id == '4')
+        class="containerCook"
+     @endif>
     <div class="detail">
         <div class="detail--headline">
             <h1 class="detail--headline__name">{{ $activity->name }}</h1>

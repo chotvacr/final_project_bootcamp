@@ -9,31 +9,32 @@
     flex-direction: row;
     justify-content: space-between; 
     align-items: center;
-    background-color: black;
-    width: 100vw;
-    padding-left: 30px;
-    padding-right: 30px;
-    position: fixed; 
-    bottom: -120px;
-    width: 100%;
-
-    
-
-.links--link {
-        margin: 10; 
-    }
-}
-
-.content {
-    color: white;
-}
-
-.invisible {
-    background: red;
-}
-
-.footer:hover {
+    background-color: rgb(199, 193, 193);
+    color: transparent;
     position: fixed; 
     bottom: 0; 
-    width: 100%; 
+    width: 100vw;
+    height:5%;  
+    &:hover {
+        color: black; 
+        height: 20%; 
+        position: fixed; 
+        position: fixed; 
+        position: fixed; 
+        bottom: 0; 
+        width: 100%; 
+        width: 100%;
+        width: 100%; 
+        @media screen and (max-width: 770px){
+            font-size: 2px;
+        }
+    }
+    &:hover content {
+        color: white; 
+    }
 }
+.links--link {
+    margin: 10; 
+}
+
+

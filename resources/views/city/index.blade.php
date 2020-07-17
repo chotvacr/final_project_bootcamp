@@ -8,11 +8,11 @@
             
             <h1 class="homepage--headline">Ready for an adventure?</h1>
 
-            <h3 class="homepage--text">Meet your neighbours and start exploring! </h3>
+            <!--<h3 class="homepage--text">Meet your neighbours and start exploring! </h3>-->
 
     
             <div class="homepage--nav">
-                <button class="homepage--nav__button">Cities</button>
+                <button class="homepage--nav__button">Select your City</button>
                 <div class="homepage--nav__content">
                     @foreach ($cities as $city)
                     <a class="content" href="/cities/{{ $city->id }}/categories">{{$city->name}}</a>
