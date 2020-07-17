@@ -13,11 +13,11 @@
   position: fixed;
   bottom: 0;
   width: 100vw;
-  height: 5%;
+  height: 3%;
 }
 .footer:hover {
   color: black;
-  height: 20%;
+  height: 10%;
   position: fixed;
   position: fixed;
   position: fixed;
@@ -28,7 +28,7 @@
 }
 @media screen and (max-width: 770px) {
   .footer:hover {
-    font-size: 2px;
+    font-size: 10px;
   }
 }
 .footer:hover content {
@@ -37,17 +37,5 @@
 
 .links--link {
   margin: 10;
-}
-
-.homepage--container__info {
-  color: white;
-}
-
-.homepage--container__contact {
-  color: white;
-}
-
-.links {
-  color: white;
 }
 /*# sourceMappingURL=footer.css.map*/

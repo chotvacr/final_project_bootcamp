@@ -12,13 +12,19 @@
     position: fixed;
     top: 0;
     width: 100%;
+
+    @media screen and (max-width: 510px) {
+            flex-direction: column; 
+            position: initial;
+            
     
     &--image {
         height: 15vh;
         padding-top: 10px;
 
         @media screen and (max-width: 510px) {
-            height: 15vh; 
+            height: 15vh;
+            flex-direction: column; 
         }
     }
     &--nav {
@@ -29,6 +35,7 @@
             flex-direction: column;
         }
     }
+}
 }
 
 .nav--link {

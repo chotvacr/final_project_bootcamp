@@ -14,10 +14,10 @@
     position: fixed; 
     bottom: 0; 
     width: 100vw;
-    height:5%;  
+    height:3%;  
     &:hover {
         color: black; 
-        height: 20%; 
+        height: 10%; 
         position: fixed; 
         position: fixed; 
         position: fixed; 
@@ -26,7 +26,7 @@
         width: 100%;
         width: 100%; 
         @media screen and (max-width: 770px){
-            font-size: 2px;
+            font-size: 10px;
         }
     }
     &:hover content {
