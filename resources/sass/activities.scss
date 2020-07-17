@@ -21,12 +21,20 @@ body {
 }
 
 .activities {
-
+    width: 40vw; 
     &--list {
         width: 70%; 
         margin: auto;
         @media screen and (max-width: 1170px){
             width: 50vw;
+        }
+        @media screen and (max-width: 900px) {
+            padding-top: 15vh;
+        }
+        @media screen and (max-width: 385px) {
+            padding-top: 20vh;
+            width: 150%; 
+            margin: auto;
         }
         text-align: center;
         padding-top: 5vh;
@@ -55,9 +63,12 @@ body {
     justify-content: center;
     &__name {
         color: black; 
-            text-decoration: none;
-            font-size: 40px;
-            font-weight: 450;
+        text-decoration: none;
+        font-size: 40px;
+        font-weight: 450;
+        @media screen and (max-width: 900px) {
+            font-size: 30px;
+        }
     }
     &:hover {
         border: 1px solid $background-color;

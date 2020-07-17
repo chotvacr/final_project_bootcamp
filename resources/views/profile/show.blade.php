@@ -20,13 +20,13 @@
             <div class="personalinfo">
                 <h1 class="personalinfo__welcome">Welcome {{Auth::user()->name}}</h1>
     
-                <div>
+                <div class="me">
                     <h2>Your Details: </h2>
                     
                     <p> Displayed description about me: {{Auth::user()->description}}</p>
                     
                     <form action="{{ route('profile.edit', [$user->id]) }}">
-                        <button class="btn" type="submit">Edit information about you</button> 
+                        <div class="box"><div class="btn"><button class="submit" type="submit">Edit information about you</button></div></div>
                     </form>
                     <!-- <a href="{{ route('profile.edit', [$user->id]) }}">Edit information about you</a> -->
                 </div>

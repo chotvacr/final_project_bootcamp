@@ -12,7 +12,7 @@
   top: 0;
   width: 100%;
 }
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 900px) {
   .header {
     flex-direction: column;
     position: initial;
@@ -22,18 +22,18 @@
     padding-top: 10px;
   }
 }
-@media screen and (max-width: 510px) and (max-width: 510px) {
+@media screen and (max-width: 900px) and (max-width: 900px) {
   .header--image {
     height: 15vh;
     flex-direction: column;
   }
 }
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 900px) {
   .header--nav {
     padding-left: 5px;
   }
 }
-@media screen and (max-width: 510px) and (max-width: 510px) {
+@media screen and (max-width: 900px) and (max-width: 900px) {
   .header--nav {
     display: flex;
     flex-direction: column;
