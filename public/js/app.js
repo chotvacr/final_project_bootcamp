@@ -28769,13 +28769,11 @@ var ActivityList = /*#__PURE__*/function (_React$Component) {
           href: "/cities/".concat(activity.city_id, "/").concat(activity.category_id, "/").concat(activity.id)
         }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity__name"
-        }, activity.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, activity.name)), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity__description"
         }, activity.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "activity__datetime"
-        }, activity.date_time), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "activity__address"
-        }, activity.address));
+        }, "Date and Time: ", activity.date_time));
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "map"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
@@ -28983,7 +28981,6 @@ if (document.getElementById('react')) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 __webpack_require__(/*! C:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! C:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\homepage.scss */"./resources/sass/homepage.scss");
@@ -28999,23 +28996,6 @@ __webpack_require__(/*! C:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcam
 __webpack_require__(/*! C:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\create.scss */"./resources/sass/create.scss");
 __webpack_require__(/*! C:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\search.scss */"./resources/sass/search.scss");
 module.exports = __webpack_require__(/*! C:\Bootcamp\web\Bootcamp\Portfolio\final_project_bootcamp\resources\sass\editactivity.scss */"./resources/sass/editactivity.scss");
-=======
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\homepage.scss */"./resources/sass/homepage.scss");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\profilepage.scss */"./resources/sass/profilepage.scss");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\profileedit.scss */"./resources/sass/profileedit.scss");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\header.scss */"./resources/sass/header.scss");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\footer.scss */"./resources/sass/footer.scss");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\activities.scss */"./resources/sass/activities.scss");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\register.scss */"./resources/sass/register.scss");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\login.scss */"./resources/sass/login.scss");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\categories.scss */"./resources/sass/categories.scss");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\detail.scss */"./resources/sass/detail.scss");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\create.scss */"./resources/sass/create.scss");
-__webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\search.scss */"./resources/sass/search.scss");
-module.exports = __webpack_require__(/*! C:\web\bootcamp\bootcamp\projects\final_project\final_project_bootcamp\resources\sass\editactivity.scss */"./resources/sass/editactivity.scss");
->>>>>>> 55a6be9071faf01f2ec1d7adb65b5263786254fe
 
 
 /***/ })

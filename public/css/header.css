@@ -47,4 +47,26 @@
   display: flex;
   flex-direction: row-reverse;
 }
+
+.input--form {
+  background-color: #f6f6f6;
+  border: #e9ccda;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn--header {
+  background-color: #e9ccda;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 /*# sourceMappingURL=header.css.map*/
